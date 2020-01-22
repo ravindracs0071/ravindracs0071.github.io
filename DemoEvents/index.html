@@ -17,158 +17,568 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .slider-text h1, .slider-text h1 span, .slider-text p, #timer .time, #timer .time span {
-            color: #FFF!important;
+    <style type="text/css">
+        .mapouter {
+            position: relative;
+            text-align: right;
+            height: 100%;
+            width: 100%;
         }
-        
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 100%;
+            width: 100%;
+        }
+
+        .navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+            color: #2a2e78 !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #000 !important;
+            font-weight: 700;
+        }
+
+        .testimony-wrap .user-img-fake {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .user-img-fake {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .wrap {
+            position: relative;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 540px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+
+        h1 {
+            margin-bottom: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-variant-numeric: normal;
+            font-variant-east-asian: normal;
+            font-weight: 300;
+            font-stretch: normal;
+            font-size: 2.25em;
+            line-height: normal;
+            font-family: nunito sans,Arial,sans-serif;
+        }
+
+            h1 strong {
+                font-weight: 400;
+                /*color: #ea4c4c;*/
+                color: #fff;
+            }
+
+        .countdown {
+            width: 720px;
+            margin: 0 auto;
+        }
+
+            .countdown .bloc-time {
+                float: left;
+                margin-right: 45px;
+                text-align: center;
+            }
+
+                .countdown .bloc-time:last-child {
+                    margin-right: 0;
+                }
+
+            .countdown .count-title {
+                display: block;
+                margin-bottom: 15px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-variant-numeric: normal;
+                font-variant-east-asian: normal;
+                font-weight: normal;
+                font-stretch: normal;
+                font-size: 0.94em;
+                line-height: normal;
+                font-family: nunito sans,Arial,sans-serif;
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            .countdown .figure {
+                position: relative;
+                float: left;
+                height: 110px;
+                width: 100px;
+                margin-right: 10px;
+                background-color: #fff;
+                border-radius: 8px;
+                -moz-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+                -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+                box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+            }
+
+                .countdown .figure:last-child {
+                    margin-right: 0;
+                }
+
+                .countdown .figure > span {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-variant-numeric: normal;
+                    font-variant-east-asian: normal;
+                    font-weight: 700;
+                    font-stretch: normal;
+                    font-size: 5.94em;
+                    line-height: 107px;
+                    font-family: nunito sans,Arial,sans-serif;
+                    font-weight: 700;
+                    color: #2a2e78;
+                }
+
+                .countdown .figure .top:after, .countdown .figure .bottom-back:after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                }
+
+                .countdown .figure .top {
+                    z-index: 3;
+                    background-color: #f7f7f7;
+                    transform-origin: 50% 100%;
+                    -webkit-transform-origin: 50% 100%;
+                    -moz-border-radius-topleft: 10px;
+                    -webkit-border-top-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    -moz-border-radius-topright: 10px;
+                    -webkit-border-top-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                    -moz-transform: perspective(200px);
+                    -ms-transform: perspective(200px);
+                    -webkit-transform: perspective(200px);
+                    transform: perspective(200px);
+                }
+
+                .countdown .figure .bottom {
+                    z-index: 1;
+                }
+
+                    .countdown .figure .bottom:before {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 50%;
+                        background-color: rgba(0, 0, 0, 0.02);
+                    }
+
+                .countdown .figure .bottom-back {
+                    z-index: 2;
+                    top: 0;
+                    height: 50%;
+                    overflow: hidden;
+                    background-color: #f7f7f7;
+                    -moz-border-radius-topleft: 10px;
+                    -webkit-border-top-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    -moz-border-radius-topright: 10px;
+                    -webkit-border-top-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+
+                    .countdown .figure .bottom-back span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+
+                .countdown .figure .top, .countdown .figure .top-back {
+                    height: 50%;
+                    overflow: hidden;
+                    -moz-backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                }
+
+                .countdown .figure .top-back {
+                    z-index: 4;
+                    bottom: 0;
+                    background-color: #fff;
+                    -webkit-transform-origin: 50% 0;
+                    transform-origin: 50% 0;
+                    -moz-transform: perspective(200px) rotateX(180deg);
+                    -ms-transform: perspective(200px) rotateX(180deg);
+                    -webkit-transform: perspective(200px) rotateX(180deg);
+                    transform: perspective(200px) rotateX(180deg);
+                    -moz-border-radius-bottomleft: 10px;
+                    -webkit-border-bottom-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    -moz-border-radius-bottomright: 10px;
+                    -webkit-border-bottom-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+
+                    .countdown .figure .top-back span {
+                        position: absolute;
+                        top: -100%;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .navbar-dark .navbar-toggler {
+            color: #2a2e78;
+            border-color: #2a2e78;
+        }
+
+        .navbar-toggler {
+            border: 1px solid #2a2e78;
+        }
+
+        .wrap-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 30px;
+            border-radius: 50%;
+            position: relative;
+            display: block;
+            background: #2a2e78;
+        }
+
+            .wrap-icon > span {
+                font-size: 2rem;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+
+        .navbar-dark .navbar-nav .nav-link {
+            font-weight: 700;
+        }
+
+        #skippy {
+            display: block;
+            padding: 1em;
+            color: #2a2e78;
+            background-color: #fff;
+            outline: 0;
+        }
+
+        .old-bv {
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        .bd-navbar {
+            min-height: 4rem;
+            background-color: #fff;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+        }
+
+        .slider-text h1, .slider-text h1 span, .slider-text p, #timer .time, #timer .time span {
+            color: #2a2e78 !important;
+        }
+
         .table-header-content {
-            background: #F96D00 !important;
-            border-color: #F96D00 !important;
+            background: #2a2e78 !important;
+            border-color: #2a2e78 !important;
             color: #fff !important;
         }
+
         .text-align-middle {
-            vertical-align: middle!important;
+            vertical-align: middle !important;
         }
+
         .text-strike-through {
             text-decoration: line-through;
         }
+
         .logo-action-head {
             font-weight: 600;
             font-size: 20px;
             text-transform: uppercase;
             display: flex;
         }
+
         .logo-action-title {
             font-size: 11px;
-            color: #F96D00 !important;
+            color: #2a2e78 !important;
             text-transform: none;
             display: flex;
         }
+
         .logo-action:hover, .logo-action:focus {
-            color: #000!important;
+            color: #000 !important;
         }
-        
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
         <div class="container">
-            <a class="navbar-brand logo-action" href="index.html">
-                <img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 46px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="javascript:void(0);" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Facility</a></li>
-                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Organizing Committee</a></li>
-                    <li class="nav-item"><a href="registration.html" class="nav-link">Registration</a></li>
-                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Venue</a></li>
-                    <li class="nav-item"><a href="javascript:void(0);" class="nav-link">Contact</a></li>
-                    <!-- <li class="nav-item cta mr-md-2"><a href="#" class="nav-link">Buy ticket</a></li> -->
-                </ul>
-            </div>
+            <span class="skiplink-text">Skip to main content</span>
         </div>
-    </nav>
+    </a>
+    <a class="d-block px-3 py-2 text-center text-bold old-bv" style="border-bottom: 1px solid #e9ecef;">
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="8">
+            <strong>
+                Make your reservations at the earliest possible, October is a peak season. End minute reservations will
+                be
+                subjected to availability. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Early Bird Registration Closed. Register
+                Soon…!!! Avail the Third Bracket till 02<sup>nd</sup> October 2020
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Abstract submission</strong> is now closed.
+            </strong>
+        </marquee>
+    </a>
+    <header class="navbar navbar-expand-md bg-white navbar-dark" id="ftco-navbar">
+        <a class="navbar-brand" href="/">
+            <img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 46px;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link p-2" href="javascript:void(0);">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#about-overview">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="faculty.html">
+                        Faculty
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="program.html">
+                        Program
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link p-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Committee
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="organizing-committee.html">ISA National Committte</a>
+                        <a class="dropdown-item" href="organizing-committee.html">ISACONUP 2020 Committee</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="registration.html">
+                        Registration
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="abstract.html">
+                        Abstract
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="accommodation.html">
+                        Accommodation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="trade.html">
+                        Trade
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="venue.html">
+                        Venue
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#contact-overview">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section class="section bg-light py-5  bottom-slant-gray" style="background-image: url('images/banner_bhu_02.jpg')!important;">
+        <div class="wrap">
+            <h1><strong>INDIAN SOCIETY OF ANAESTHESIOLOGISTS ISACONUP 2020</strong></h1>
+            <h1><strong>Annual State Conference of the Indian Society of Anaesthesiologists - Uttar Pradesh 2020</strong></h1>
+            <h1><strong><span class="icon-calendar mr-2"></span>02-04 October 2020 - Varanasi India</strong></h1>
+            <div class="countdown">
+                <div class="bloc-time hours" data-init-value="24">
+                    <span class="count-title">Hours</span>
 
-    <div class="hero-wrap" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
-                <div class="col-lg-12 col-md-12 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-                    <h1 class="mb-4"><span>Indian Society of Anaesthesiologists</span></h1>
-                    <h1 class="mb-4"><span>ISACONUP 2020</span></h1>
-                    <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Annual State Conference of the Indian Society of Anaesthesiologists - Uttar Pradesh 2020</h1>
-                    <p class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="icon-calendar mr-2"></span>02-04 October 2020 - Varanasi India</p>
-                    <div id="timer" class="d-flex">
-                        <div class="time" id="days"></div>
-                        <div class="time pl-3" id="hours"></div>
-                        <div class="time pl-3" id="minutes"></div>
-                        <div class="time pl-3" id="seconds"></div>
+                    <div class="figure hours hours-1">
+                        <span class="top">2</span>
+                        <span class="top-back">
+                            <span>2</span>
+                        </span>
+                        <span class="bottom">2</span>
+                        <span class="bottom-back">
+                            <span>2</span>
+                        </span>
+                    </div>
+
+                    <div class="figure hours hours-2">
+                        <span class="top">4</span>
+                        <span class="top-back">
+                            <span>4</span>
+                        </span>
+                        <span class="bottom">4</span>
+                        <span class="bottom-back">
+                            <span>4</span>
+                        </span>
                     </div>
                 </div>
-                <!--<div class="col-lg-2 col"></div>
-                <div class="col-lg-4 col-md-6 mt-0 mt-md-5">
-                    <form action="#" class="request-form ftco-animate">
-                        <h2>Join Event</h2>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter your Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter your Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter your Phone">
-                        </div>
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="" class="mr-2"> I have read and accept the terms and conditions</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Join now" class="btn btn-primary py-3 px-4">
-                        </div>
-                    </form>
-                </div>-->
-            </div>
-        </div>
-    </div>
-    <section class="ftco-section services-section bg-primary">
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                    <div class="media block-6 services d-block" style="text-align:center;">
-                        <div class="icon"><span class="icon-edge"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">
-                                Registration
-                            </h3>
-                            <p>Third Bracket till 31<sup>st</sup>  January 2020</p>
-                        </div>
+
+                <div class="bloc-time min" data-init-value="0">
+                    <span class="count-title">Minutes</span>
+
+                    <div class="figure min min-1">
+                        <span class="top">0</span>
+                        <span class="top-back">
+                            <span>0</span>
+                        </span>
+                        <span class="bottom">0</span>
+                        <span class="bottom-back">
+                            <span>0</span>
+                        </span>
+                    </div>
+
+                    <div class="figure min min-2">
+                        <span class="top">0</span>
+                        <span class="top-back">
+                            <span>0</span>
+                        </span>
+                        <span class="bottom">0</span>
+                        <span class="bottom-back">
+                            <span>0</span>
+                        </span>
                     </div>
                 </div>
-                <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                    <div class="media block-6 services d-block" style="text-align:center;">
-                        <div class="icon"><span class="icon-event_note"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">Date</h3>
-                            <p>2<sup>nd</sup> - 4<sup>th</sup> October 2020</p>
-                        </div>
+
+                <div class="bloc-time sec" data-init-value="0">
+                    <span class="count-title">Seconds</span>
+
+                    <div class="figure sec sec-1">
+                        <span class="top">0</span>
+                        <span class="top-back">
+                            <span>0</span>
+                        </span>
+                        <span class="bottom">0</span>
+                        <span class="bottom-back">
+                            <span>0</span>
+                        </span>
                     </div>
-                </div>
-                <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                    <div class="media block-6 services d-block" style="text-align:center;">
-                        <div class="icon"><span class="icon-map-marker"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">Venue</h3>
-                            <p>Swatantrata Bhawan, BHU</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                    <div class="media block-6 services d-block" style="text-align:center;">
-                        <div class="icon"><span class="icon-location-arrow"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">Location</h3>
-                            <p>Varanasi, India</p>
-                        </div>
+
+                    <div class="figure sec sec-2">
+                        <span class="top">0</span>
+                        <span class="top-back">
+                            <span>0</span>
+                        </span>
+                        <span class="bottom">0</span>
+                        <span class="bottom-back">
+                            <span>0</span>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="ftco-section ftco-no-pt ftco-no-pb">
+    <section class="section bg-light py-5 bottom-slant-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="">
+                    <span class="wrap-icon"><span class="icon-edge d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Registration</h3>
+                    <p>Third Bracket till 31<sup>st</sup> January 2020</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="">
+                    <span class="wrap-icon"><span class="icon-event_note d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Date</h3>
+                    <p>2nd-4th October 2020</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="">
+                    <span class="wrap-icon"><span class="icon-map-marker d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Venue</h3>
+                    <p>Swatantrata Bhawan, BHU</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="">
+                    <span class="wrap-icon"><span class="icon-location-arrow d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Location</h3>
+                    <p>Varanasi, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-overview" class="ftco-section ftco-no-pt ftco-no-pb">
         <div class="container">
             <div class="row no-gutters">
-                <!--<div class="col-md-5 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);"></div>-->
                 <div class="col-md-12 wrap-about py-md-5 ftco-animate">
-                    <div class="heading-section mb-5 pt-5 pl-md-5">
+                    <div class="heading-section mb-5">
                         <div class="justify-content-center pr-md-5 mr-md-5">
-                            <h2 class="mb-4">ISACONUP 2020</h2>
+                            <h2 style="color: #2a2e78;">ISACONUP 2020</h2>
                         </div>
                         <p>
                             <span style="font-size: 40px;font-weight: 600;">Dear Colleagues,</span> <br />
@@ -191,122 +601,160 @@
                             <b>With warm regards</b>
                         </p>
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="speaker ftco-animate speaker-1 d-flex align-items-center mb-5 fadeInUp ftco-animated">
-                                    <div class="img" style="background-image: url(images/Prof-S-K-Mathur.jpg);"></div>
-                                    <div class="text pl-4">
-                                        <h3>Prof. S K Mathur</h3>
-                                        <span class="position">Org. Chairman</span>
-                                    </div>
-                                </div>
-                                <div class="speaker ftco-animate speaker-1 d-flex align-items-center mb-5 fadeInUp ftco-animated">
-                                    <div class="img" style="background-image: url(images/vikramgupta.jpg);"></div>
-                                    <div class="text pl-4">
-                                        <h3>Dr. Bikram  Gupta</h3>
-                                        <span class="position">Org. Secretary</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 d-flex align-items-start">
-                                <div class="speaker ftco-animate d-flex align-items-start">
-                                    <div class="img">
-                                        <div class="text text-absolute" style="text-align:center;">
-                                            <h3>Organized by:</h3>
+                            <div class="col-xs-12 col-md-8">
+                                <table style="text-align: center;border: none;display: inline-block;padding-right: 15px;padding-left: 15px;">
+                                    <tr>
+                                        <td>
+                                            <img alt="Prof. S K Mathur" src="images/Prof-S-K-Mathur.jpg" class="speaker img" style="width: 137px;height: 160px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text">
+                                                <h3 style="font-size: 20px;font-weight: 600;margin-bottom: 0;color: #2a2e78;">Prof. S K Mathur</h3>
+                                                <span class="position" style="font-size: 13px;text-transform: uppercase;letter-spacing: 2px;font-weight: 500;">Org. Chairman</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table style="text-align: center;border: none;display: inline-block;padding-right: 15px;padding-left: 15px;">
+                                    <tr>
+                                        <td>
+                                            <img alt="Dr. Bikram  Gupta" src="images/vikramgupta.jpg" class="speaker img" style="width: 137px;height: 160px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="text">
+                                                <h3 style="font-size: 20px;font-weight: 600;margin-bottom: 0;color: #2a2e78;">Dr. Bikram  Gupta</h3>
+                                                <span class="position" style="font-size: 13px;text-transform: uppercase;letter-spacing: 2px;font-weight: 500;">Org. Secretary</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table style="margin: 1rem 0rem 1rem 0rem;">
+                                    <tr>
+                                        <td>
+                                            <h3 style="font-size: 20px;font-weight: 600;margin-bottom: 0;color: #2a2e78;">Organized by:</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
                                             <span>Dept. of Anaesthesiology, IMS, BHU, Varanasi,</span>
-                                            <br />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
                                             <span>Varanasi Society of Anaesthesiology, Varanasi.</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-xs-12 col-md-4">
+                                <img src="images/highlight-1.png" alt="Highlights" style="width:100%;" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-light py-5 bottom-slant-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="" style="cursor: pointer!important;" onclick="navUrl('lib/brochure-2.pdf');">
+                    <span class="wrap-icon"><span class="icon-book d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Conference Brochure</h3>
+                    <p>&nbsp;</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="" style="cursor: pointer!important;" onclick="navUrl('lib/registration-form-1.pdf');">
+                    <span class="wrap-icon"><span class="icon-image d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Offline Registration Form</h3>
+                    <p>&nbsp;</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="" style="cursor: pointer!important;" onclick="navUrl('lib/s-brochure-2.pdf');">
+                    <span class="wrap-icon"><span class="icon-life-saver d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Sponsorship Brochure</h3>
+                    <p>&nbsp;</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="" style="cursor: pointer!important;" onclick="navUrl('organizing-committee.html');">
+                    <span class="wrap-icon"><span class="icon-graduation-cap d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Organizing Committee</h3>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-12 wrap-about py-md-5 ftco-animate">
+                    <div class="heading-section mb-5">
+                        <div class="justify-content-center pr-md-5 mr-md-5">
+                            <h2 style="color: #2a2e78;">Organizing Committee</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                                <div class="carousel-testimony owl-carousel ftco-owl">
+                                    <div class="item">
+                                        <div class="testimony-wrap text-center py-4 pb-5">
+                                            <div class="user-img mb-4" style="background-image: url(images/Prof-S-K-Mathur.jpg)">
+                                            </div>
+                                            <div class="text pt-4">
+                                                <p class="name">Prof. S. K. Mathur</p>
+                                                <span class="position">Org. Chairman</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimony-wrap text-center py-4 pb-5">
+                                            <div class="user-img mb-4" style="background-image: url(images/vikramgupta.jpg)">
+                                            </div>
+                                            <div class="text pt-4">
+                                                <p class="name">Dr. Bikram  Gupta</p>
+                                                <span class="position">Org. Secretary</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimony-wrap text-center py-4 pb-5">
+                                            <div class="user-img mb-4" style="background-image: url(images/rbr-1.jpg)">
+                                            </div>
+                                            <div class="text pt-4">
+                                                <p class="name">Prof. Ram Badan Ram</p>
+                                                <span class="position">Scientific Secretary</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="testimony-wrap text-center py-4 pb-5">
+                                            <div class="user-img mb-4" style="background-image: url(images/sp-1.jpg)">
+                                            </div>
+                                            <div class="text pt-4">
+                                                <p class="name">Dr. Shashi Prakash</p>
+                                                <span class="position">Co-Org. Secretary</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="ftco-section services-section bg-primary">
-        <div class="container">
-            <div class="row d-flex">
-                <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                    <div class="media block-6 services d-block" style="text-align:center;">
-                        <div class="icon mb-4"><span class="icon-book"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">
-                                Conference Brochure
-                            </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                    <div class="media block-6 services d-block" style="text-align:center;">
-                        <div class="icon mb-4"><span class="icon-image"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">Offline Registration Form</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                    <div class="media block-6 services d-block" style="text-align:center;">
-                        <div class="icon mb-4"><span class="icon-life-saver"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">Sponsorship Brochure</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-                    <div class="media block-6 services d-block" style="text-align:center;">
-                        <div class="icon mb-4"><span class="icon-graduation-cap"></span></div>
-                        <div class="media-body">
-                            <h3 class="heading mb-3">Organizing Committee</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="ftco-section testimony-section ftco-no-pt" style="padding-bottom: 0rem!important;">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-7 text-center heading-section ftco-animate">
-                    <h2 class="mb-3">Organizing Committee</h2>
-                </div>
-            </div>
-            <div class="row ftco-animate">
-                <div class="col-md-12">
-                    <div class="carousel-testimony owl-carousel ftco-owl">
-                        <div class="item">
-                            <div class="testimony-wrap text-center py-4 pb-5">
-                                <div class="user-img mb-4" style="background-image: url(images/Prof-S-K-Mathur.jpg)">
-                                </div>
-                                <div class="text pt-4">
-                                    <span class="name">Prof. S K Mathur</span><br />
-                                    <span class="position">Org. Chairman</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image: url(images/vikramgupta.jpg)">
-                            </div>
-                            <div class="text pt-4">
-                                <span class="name">Dr. Bikram Gupta</span><br />
-                                <span class="position">Org. Secretary</span>
-                            </div>
-                        </div>
-                        <div class="testimony-wrap text-center py-4 pb-5">
-                            <div class="user-img mb-4" style="background-image: url(images/Prof-S-K-Mathur.jpg)">
-                            </div>
-                            <div class="text pt-4">
-                                <span class="name">Prof. S K Mathur</span><br />
-                                <span class="position">Org. Chairman</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="ftco-section contact-section" style="padding-top: 0rem!important;">
+
+    <section class="ftco-section contact-section" id="contact-overview">
         <div class="container">
             <div class="row d-flex mb-5 contact-info">
                 <div class="col-md-12 mb-4 text-center heading-section ftco-animate">
@@ -334,7 +782,11 @@
                     </form>
                 </div>
                 <div class="col-md-6 d-flex">
-                    <div id="map" class="bg-white"></div>
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="100%" height="558" id="gmap_canvas" src="https://maps.google.com/maps?q=Swatantrata%20Bhavan%2C%20Hindu%20University%2C%20Varanasi%2C%20Uttar%20Pradesh%20221005&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="w-100"></div>
@@ -342,7 +794,7 @@
                 <div class="col-md-6 order-md-last d-flex">
                     <form action="javascript:void(0);" class="bg-light p-5 contact-form">
                         <b>CONFERENCE SECRETARIAT</b><br />
-                        <img src="images/isaconup-2020.jpg" alt="images/isaconup-2020.jpg" style="width: 190px; height: 60px;" /><br />
+                        <!--<img src="images/isaconup-2020.jpg" alt="images/isaconup-2020.jpg" style="width: 190px; height: 60px;" /><br />-->
                         Dept of Anaesthesiology<br />
                         Dr. Bikram Gupta - Org. Secretary<br />
                         1st Floor, Main OT complex<br />
@@ -354,7 +806,7 @@
                 </div>
                 <div class="col-md-6 d-flex">
                     <form action="javascript:void(0);" class="bg-light p-5 contact-form">
-                        <b>CONFERENCE MANAGER</b><br/>
+                        <b>CONFERENCE MANAGER</b><br />
                         <img src="images/cim-logo.png" alt="images/cim-logo.png" style="width: 190px; height: 60px;" /><br />
                         <b>CIMGlobal India Pvt. Ltd.</b><br />
                         Suite No. 309, DLF City Court, MG Road<br />
@@ -370,61 +822,12 @@
         </div>
     </section>
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <footer class="ftco-footer ftco-bg-dark ftco-section" style="padding: 1em 0;background: #2a2e78!important;">
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">ISACONUP-2020.</h2>
-                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                        <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                            <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                            <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4 ml-md-5">
-                        <h2 class="ftco-heading-2">Useful Links</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Speakers</a></li>
-                            <li><a href="#" class="py-2 d-block">Shcedule</a></li>
-                            <li><a href="#" class="py-2 d-block">Events</a></li>
-                            <li><a href="#" class="py-2 d-block">Blog</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Privacy</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="py-2 d-block">Career</a></li>
-                            <li><a href="#" class="py-2 d-block">About Us</a></li>
-                            <li><a href="#" class="py-2 d-block">Contact Us</a></li>
-                            <li><a href="#" class="py-2 d-block">Services</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Have a Questions?</h2>
-                        <div class="block-23 mb-3">
-                            <ul>
-                                <li><span class="icon icon-map-marker"></span><span class="text">Banaras Hindu University, Varanasi, Uttar Pradesh, India - 221005</span></li>
-                                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 123 456 7894</span></a></li>
-                                <li><a href="#"><span class="icon icon-envelope"></span><span class="text"><span>info@isaconup2020.com</span></span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12 text-center">
                     <p>
                         Copyright &copy; ISACONUP &reg; 2020
-                        <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
-                        <!-- <script type="5b673f80b68a358911aabf75-text/javascript">document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
                     </p>
                 </div>
             </div>
@@ -432,16 +835,16 @@
     </footer>
 
     <div id="ftco-loader" class="show fullscreen">
-        <svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg>
+        <svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#2a2e78" /></svg>
     </div>
 
     <div class="modal" tabindex="-1" role="dialog" id="important-update">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header bg-warning">
-                    <h5 class="modal-title" style="font-weight:700;">Important Update</h5>
+                <div class="modal-header bg-warning" style="background-color: #2a2e78!important;">
+                    <h5 class="modal-title" style="font-weight:700;color:#fff!important;">Important Update</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true" style="color:#fff!important;">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -475,15 +878,162 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () { $('#important-update').modal('show'); });
+        function navUrl(uriValue) {
+            window.location.href = uriValue;
+        }
+        //http://isacon2020.com/index.php #F96D00 - > #2a2e78
+        $(document).ready(function () { $('#important-update').modal('show'); }); 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZkgSym8Igne-_ZSCmWDfSg12B5FNW6UY&sensor=false"></script>
-    <script src="js/google-map.js"></script>
+    <!--<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="js/google-map.js"></script>-->
     <!--
     <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="5b673f80b68a358911aabf75-|49" defer=""></script>
     -->
+    <script type="text/javascript">
+        // Create Countdown
+        var Countdown = {
+
+            // Backbone-like structure
+            $el: $('.countdown'),
+
+            // Params
+            countdown_interval: null,
+            total_seconds: 0,
+
+            // Initialize the countdown
+            init: function () {
+
+                // DOM
+                this.$ = {
+                    hours: this.$el.find('.bloc-time.hours .figure'),
+                    minutes: this.$el.find('.bloc-time.min .figure'),
+                    seconds: this.$el.find('.bloc-time.sec .figure')
+                };
+
+                // Init countdown values
+                this.values = {
+                    hours: this.$.hours.parent().attr('data-init-value'),
+                    minutes: this.$.minutes.parent().attr('data-init-value'),
+                    seconds: this.$.seconds.parent().attr('data-init-value'),
+                };
+
+                // Initialize total seconds
+                this.total_seconds = this.values.hours * 60 * 60 + (this.values.minutes * 60) + this.values.seconds;
+
+                // Animate countdown to the end
+                this.count();
+            },
+
+            count: function () {
+
+                var that = this,
+                    $hour_1 = this.$.hours.eq(0),
+                    $hour_2 = this.$.hours.eq(1),
+                    $min_1 = this.$.minutes.eq(0),
+                    $min_2 = this.$.minutes.eq(1),
+                    $sec_1 = this.$.seconds.eq(0),
+                    $sec_2 = this.$.seconds.eq(1);
+
+                this.countdown_interval = setInterval(function () {
+
+                    if (that.total_seconds > 0) {
+
+                        --that.values.seconds;
+
+                        if (that.values.minutes >= 0 && that.values.seconds < 0) {
+
+                            that.values.seconds = 59;
+                            --that.values.minutes;
+                        }
+
+                        if (that.values.hours >= 0 && that.values.minutes < 0) {
+
+                            that.values.minutes = 59;
+                            --that.values.hours;
+                        }
+
+                        // Update DOM values
+                        // Hours
+                        that.checkHour(that.values.hours, $hour_1, $hour_2);
+
+                        // Minutes
+                        that.checkHour(that.values.minutes, $min_1, $min_2);
+
+                        // Seconds
+                        that.checkHour(that.values.seconds, $sec_1, $sec_2);
+
+                        --that.total_seconds;
+                    }
+                    else {
+                        clearInterval(that.countdown_interval);
+                    }
+                }, 1000);
+            },
+
+            animateFigure: function ($el, value) {
+
+                var that = this,
+                    $top = $el.find('.top'),
+                    $bottom = $el.find('.bottom'),
+                    $back_top = $el.find('.top-back'),
+                    $back_bottom = $el.find('.bottom-back');
+
+                // Before we begin, change the back value
+                $back_top.find('span').html(value);
+
+                // Also change the back bottom value
+                $back_bottom.find('span').html(value);
+
+                // Then animate
+                TweenMax.to($top, 0.8, {
+                    rotationX: '-180deg',
+                    transformPerspective: 300,
+                    ease: Quart.easeOut,
+                    onComplete: function () {
+
+                        $top.html(value);
+
+                        $bottom.html(value);
+
+                        TweenMax.set($top, { rotationX: 0 });
+                    }
+                });
+
+                TweenMax.to($back_top, 0.8, {
+                    rotationX: 0,
+                    transformPerspective: 300,
+                    ease: Quart.easeOut,
+                    clearProps: 'all'
+                });
+            },
+
+            checkHour: function (value, $el_1, $el_2) {
+
+                var val_1 = value.toString().charAt(0),
+                    val_2 = value.toString().charAt(1),
+                    fig_1_value = $el_1.find('.top').html(),
+                    fig_2_value = $el_2.find('.top').html();
+
+                if (value >= 10) {
+
+                    // Animate only if the figure has changed
+                    if (fig_1_value !== val_1) this.animateFigure($el_1, val_1);
+                    if (fig_2_value !== val_2) this.animateFigure($el_2, val_2);
+                }
+                else {
+
+                    // If we are under 10, replace first figure with 0
+                    if (fig_1_value !== '0') this.animateFigure($el_1, 0);
+                    if (fig_2_value !== val_1) this.animateFigure($el_2, val_1);
+                }
+            }
+        };
+
+        // Let's go !
+        Countdown.init();
+    </script>
 </body>
 </html>

@@ -1,10 +1,661 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <title>The ISACON - 2020&nbsp;Varanasi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+        .mapouter {
+            position: relative;
+            text-align: right;
+            height: 100%;
+            width: 100%;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 100%;
+            width: 100%;
+        }
+
+        .navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+            color: #2a2e78 !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #000 !important;
+            font-weight: 700;
+        }
+
+        .testimony-wrap .user-img-fake {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .user-img-fake {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .wrap {
+            position: relative;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 540px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+
+        h1 {
+            margin-bottom: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-variant-numeric: normal;
+            font-variant-east-asian: normal;
+            font-weight: 300;
+            font-stretch: normal;
+            font-size: 2.25em;
+            line-height: normal;
+            font-family: nunito sans,Arial,sans-serif;
+        }
+
+            h1 strong {
+                font-weight: 400;
+                /*color: #ea4c4c;*/
+                color: #fff;
+            }
+
+        .countdown {
+            width: 720px;
+            margin: 0 auto;
+        }
+
+            .countdown .bloc-time {
+                float: left;
+                margin-right: 45px;
+                text-align: center;
+            }
+
+                .countdown .bloc-time:last-child {
+                    margin-right: 0;
+                }
+
+            .countdown .count-title {
+                display: block;
+                margin-bottom: 15px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-variant-numeric: normal;
+                font-variant-east-asian: normal;
+                font-weight: normal;
+                font-stretch: normal;
+                font-size: 0.94em;
+                line-height: normal;
+                font-family: nunito sans,Arial,sans-serif;
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            .countdown .figure {
+                position: relative;
+                float: left;
+                height: 110px;
+                width: 100px;
+                margin-right: 10px;
+                background-color: #fff;
+                border-radius: 8px;
+                -moz-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+                -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+                box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+            }
+
+                .countdown .figure:last-child {
+                    margin-right: 0;
+                }
+
+                .countdown .figure > span {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-variant-numeric: normal;
+                    font-variant-east-asian: normal;
+                    font-weight: 700;
+                    font-stretch: normal;
+                    font-size: 5.94em;
+                    line-height: 107px;
+                    font-family: nunito sans,Arial,sans-serif;
+                    font-weight: 700;
+                    color: #2a2e78;
+                }
+
+                .countdown .figure .top:after, .countdown .figure .bottom-back:after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                }
+
+                .countdown .figure .top {
+                    z-index: 3;
+                    background-color: #f7f7f7;
+                    transform-origin: 50% 100%;
+                    -webkit-transform-origin: 50% 100%;
+                    -moz-border-radius-topleft: 10px;
+                    -webkit-border-top-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    -moz-border-radius-topright: 10px;
+                    -webkit-border-top-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                    -moz-transform: perspective(200px);
+                    -ms-transform: perspective(200px);
+                    -webkit-transform: perspective(200px);
+                    transform: perspective(200px);
+                }
+
+                .countdown .figure .bottom {
+                    z-index: 1;
+                }
+
+                    .countdown .figure .bottom:before {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 50%;
+                        background-color: rgba(0, 0, 0, 0.02);
+                    }
+
+                .countdown .figure .bottom-back {
+                    z-index: 2;
+                    top: 0;
+                    height: 50%;
+                    overflow: hidden;
+                    background-color: #f7f7f7;
+                    -moz-border-radius-topleft: 10px;
+                    -webkit-border-top-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    -moz-border-radius-topright: 10px;
+                    -webkit-border-top-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+
+                    .countdown .figure .bottom-back span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+
+                .countdown .figure .top, .countdown .figure .top-back {
+                    height: 50%;
+                    overflow: hidden;
+                    -moz-backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                }
+
+                .countdown .figure .top-back {
+                    z-index: 4;
+                    bottom: 0;
+                    background-color: #fff;
+                    -webkit-transform-origin: 50% 0;
+                    transform-origin: 50% 0;
+                    -moz-transform: perspective(200px) rotateX(180deg);
+                    -ms-transform: perspective(200px) rotateX(180deg);
+                    -webkit-transform: perspective(200px) rotateX(180deg);
+                    transform: perspective(200px) rotateX(180deg);
+                    -moz-border-radius-bottomleft: 10px;
+                    -webkit-border-bottom-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    -moz-border-radius-bottomright: 10px;
+                    -webkit-border-bottom-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+
+                    .countdown .figure .top-back span {
+                        position: absolute;
+                        top: -100%;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .navbar-dark .navbar-toggler {
+            color: #2a2e78;
+            border-color: #2a2e78;
+        }
+
+        .navbar-toggler {
+            border: 1px solid #2a2e78;
+        }
+
+        .wrap-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 30px;
+            border-radius: 50%;
+            position: relative;
+            display: block;
+            background: #2a2e78;
+        }
+
+            .wrap-icon > span {
+                font-size: 2rem;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+
+        .navbar-dark .navbar-nav .nav-link {
+            font-weight: 700;
+        }
+
+        #skippy {
+            display: block;
+            padding: 1em;
+            color: #2a2e78;
+            background-color: #fff;
+            outline: 0;
+        }
+
+        .old-bv {
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        .bd-navbar {
+            min-height: 4rem;
+            background-color: #fff;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+        }
+
+        .slider-text h1, .slider-text h1 span, .slider-text p, #timer .time, #timer .time span {
+            color: #2a2e78 !important;
+        }
+
+        .table-header-content {
+            background: #2a2e78 !important;
+            border-color: #2a2e78 !important;
+            color: #fff !important;
+        }
+
+        .text-align-middle {
+            vertical-align: middle !important;
+        }
+
+        .text-strike-through {
+            text-decoration: line-through;
+        }
+
+        .logo-action-head {
+            font-weight: 600;
+            font-size: 20px;
+            text-transform: uppercase;
+            display: flex;
+        }
+
+        .logo-action-title {
+            font-size: 11px;
+            color: #2a2e78 !important;
+            text-transform: none;
+            display: flex;
+        }
+
+        .logo-action:hover, .logo-action:focus {
+            color: #000 !important;
+        }
+    </style>
 </head>
 <body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+    <a class="d-block px-3 py-2 text-center text-bold old-bv" style="border-bottom: 1px solid #e9ecef;">
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="8">
+            <strong>
+                Make your reservations at the earliest possible, October is a peak season. End minute reservations will
+                be
+                subjected to availability. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Early Bird Registration Closed. Register
+                Soon…!!! Avail the Third Bracket till 02<sup>nd</sup> October 2020
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Abstract submission</strong> is now closed.
+            </strong>
+        </marquee>
+    </a>
+    <header class="navbar navbar-expand-md bg-white navbar-dark" id="ftco-navbar">
+        <a class="navbar-brand" href="/">
+            <img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 46px;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="index.html#about-overview">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="faculty.html">
+                        Faculty
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="program.html">
+                        Program
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link p-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Committee
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="organizing-committee.html">ISA National Committte</a>
+                        <a class="dropdown-item" href="organizing-committee.html">ISACONUP 2020 Committee</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="registration.html">
+                        Registration
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="abstract.html">
+                        Abstract
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="accommodation.html">
+                        Accommodation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="trade.html">
+                        Trade
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link p-2" href="venue.html">
+                        Venue
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#contact-overview">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
+    <section class="section bg-light py-5 bottom-slant-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="">
+                    <span class="wrap-icon"><span class="icon-edge d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Registration</h3>
+                    <p>Third Bracket till 31<sup>st</sup> January 2020</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="">
+                    <span class="wrap-icon"><span class="icon-event_note d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Date</h3>
+                    <p>2nd-4th October 2020</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="">
+                    <span class="wrap-icon"><span class="icon-map-marker d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Venue</h3>
+                    <p>Swatantrata Bhawan, BHU</p>
+                </div>
+                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
+                     data-aos-delay="">
+                    <span class="wrap-icon"><span class="icon-location-arrow d-block mb-4"></span></span>
+                    <h3 class="mb-2 text-primary">Location</h3>
+                    <p>Varanasi, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-12 wrap-about py-md-5 ftco-animate">
+                    <div class="heading-section mb-5">
+                        <div class="justify-content-center pr-md-5 mr-md-5">
+                            <h2 style="color: #2a2e78;">Varanasi - The Holy City</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/Assi-Ghat.jpg);">
+                </div>
+                <div class="col-md-8 wrap-about py-md-5 ftco-animate fadeInUp ftco-animated">
+                    <div class="heading-section mb-5 pl-md-5">
+                        <div class="pr-md-5 mr-md-5">
+                            <h2 style="color: #2a2e78;">Assi Ghat</h2>
+                        </div>
+                        <p>
+                            According to the ancient history, it is said that the Goddess Durga (consort of the Lord Shiva) had thrown her sword in the river (called Assi River) after killing the demon Shumbha-Nishumbha. Assi Ghat is described in the Kashi Khand as "Assi Saimbeda Tirtha" means the one who gets a dip here once in his life will get punya (blessings) of all the Tirthas (religious places of the Hindu). Generally Hindu pilgrims gather to take a holy dip here in the Chaitra (month of March/April) and Magh (month of Jan/Feb) as well as some other significant events like solar/lunar eclipse, Probodhoni Ekadashi and Makar Sankranti. At this Ghat, a huge Shiva lingam is situated under the Peepal tree where pilgrims offer Jal and worship after taking holy bath in the Ganga water. Another Shiva Lingam is - Asisangameshwar lingam, in a small temple of the marble near to the Assi Ghat. The Ghat has been also described in the ancient Hindu literatures like the Matsya purana, Kurma purana, Padma Purana, Agni purana and Kashi khanda.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-8 wrap-about py-md-5 ftco-animate fadeInUp ftco-animated">
+                    <div class="heading-section mb-5 pr-md-5">
+                        <div class="pr-md-5 mr-md-5">
+                            <h2 style="color: #2a2e78;">Shri Kashi Vishwanath Temple</h2>
+                        </div>
+                        <p>
+                            Shri Kashi Vishwanath Temple is a major sacred attraction, dedicated to Lord Shiva, the presiding deity of the city. The temple houses a Shivalinga, which is said to be one amongst the twelve Jyotirlinga, the fiery pillar of light, by which Lord Shiva beckoned his divine supremacy, broke through the earth’s crust and gleamed towards the heaven. The present temple was built by Rani Ahailya Bai Holkar of Indore in the year 1776, however, Shri Kashi Vishwanath Temple was existent even before the present one. About 800 kg of gold being used to cap the spire by Maharaja Ranjit Singh, hence it is also known as the Golden Temple in Varanasi. The temple has been built and re-built several times over the past centuries. The temple derives its name from Kashi, another name for Varanasi. This tirth also finds mention in old religious texts like Skanda Purana.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/Shri-Kashi-Vishwanath-Temple.jpg);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section contact-section" id="contact-overview">
+        <div class="container">
+            <div class="row d-flex mb-5 contact-info">
+                <div class="col-md-12 mb-4 text-center heading-section ftco-animate">
+                    <h2 class="mb-3">Contact Information</h2>
+                </div>
+            </div>
+            <div class="row block-9">
+                <div class="col-md-6 order-md-last d-flex">
+                    <form action="#" class="bg-light p-5 contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="100%" height="558" id="gmap_canvas" src="https://maps.google.com/maps?q=Swatantrata%20Bhavan%2C%20Hindu%20University%2C%20Varanasi%2C%20Uttar%20Pradesh%20221005&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="row block-9" style="padding-top: 3rem;">
+                <div class="col-md-6 order-md-last d-flex">
+                    <form action="javascript:void(0);" class="bg-light p-5 contact-form">
+                        <b>CONFERENCE SECRETARIAT</b><br />
+                        <!--<img src="images/isaconup-2020.jpg" alt="images/isaconup-2020.jpg" style="width: 190px; height: 60px;" /><br />-->
+                        Dept of Anaesthesiology<br />
+                        Dr. Bikram Gupta - Org. Secretary<br />
+                        1st Floor, Main OT complex<br />
+                        Sir Sunderlal Hospital, Banaras Hindu University<br />
+                        Varanasi-221005<br />
+                        Email: bikramgupta03@gmail.com<br />
+                        Tel- (O) +91 542 2309419 (M) 9415986684
+                    </form>
+                </div>
+                <div class="col-md-6 d-flex">
+                    <form action="javascript:void(0);" class="bg-light p-5 contact-form">
+                        <b>CONFERENCE MANAGER</b><br />
+                        <img src="images/cim-logo.png" alt="images/cim-logo.png" style="width: 190px; height: 60px;" /><br />
+                        <b>CIMGlobal India Pvt. Ltd.</b><br />
+                        Suite No. 309, DLF City Court, MG Road<br />
+                        Gurgaon 122 004, Haryana, India<br />
+                        Tel: +91-124 46 17 700<br />
+                        Email: info@cimglobal.net<br />
+                        Ms. Megha Abrol<br />
+                        Email: megha@cimglobal.net<br />
+                        Mobile: +91 8800385148
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section" style="padding: 1em 0;background: #2a2e78!important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Copyright &copy; ISACONUP &reg; 2020
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#2a2e78" /></svg>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="important-update">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" style="font-weight:700;">Important Update</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <b>Quiz contest</b> will be an additional attraction of ISACONUP 2020. It will be held on <b>7th Feb 2020 from 1530-1730 hrs</b>. Interested delegates are <b>invited</b> to participate as a team. Each team comprising two participants. The theme of the <b>Quiz contest</b> will be Anaesthesia, Emergency & Critical Care. The last date of submission of names will be 31.01.2020<br />
+                        E-mail: <a href="mailto:ravindracs0071@gmail.com" title="ravindracs0071@gmail.com">ravindracs0071@gmail.com</a>.<br />
+                        Winner team will be suitably Rewarded. All participants will receive a <b>Certificate of participation</b>.
+                        <hr />
+                    </p>
+                    <p>
+                        Gentle reminder regarding <b>accommodation requirements during the conference (7-9 February 2020)</b>. As during the month of February there will be <b>heavy rush</b> of Tourist, hence we request you to kindly inform us regarding your accommodation requirements at the earliest <b>by sending One Day Room Rent in advance</b>.<br />
+                        For <b>Radisson hotel</b> kindly mail to Dr. Bikram Gupta E: <a href="mailto:bikramgupta03@gmail.com">bikramgupta03@gmail.com</a>, <a href="mailto:isaconup2020@gmail.com">isaconup2020@gmail.com</a>
+                    </p>
+                    <p>
+                        For <b>Other supporting conference hotels</b> kindly e-mail to Dr. Bikram Gupta E: <a href="mailto:bikramgupta03@gmail.com">bikramgupta03@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        function navUrl(uriValue) {
+            window.location.href = uriValue;
+        }
+    </script>
 </body>
 </html>
