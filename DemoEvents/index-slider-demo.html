@@ -18,9 +18,207 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <style type="text/css">
+        .owl-carousel:hover .owl-nav .owl-prev {
+            left: 0px !important;
+        }
+        .owl-carousel:hover .owl-nav .owl-next {
+            right: 0px !important;    
+        }
+        .owl-theme .owl-dots .owl-dot span {
+            width: 10px !important;
+            height: 10px !important;
+            margin: 0px 0px !important;
+        }
+            body {
+            font-family: nunito sans,Arial,sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .d-table {
+            width: 100%;
+            height: 100%;
+            display: table;
+        }
+
+        .d-tablecell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .custom-btn1 {
+            background-color: #2a2e78;
+            color: #fff;
+            border: 1px solid #2a2e78;
+            display: inline-block;
+            padding: 12px 30px;
+            text-transform: uppercase;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+            .custom-btn1:hover {
+                background-color: transparent;
+                text-decoration: none;
+                color: #fff;
+            }
+        /*
+Hero slider style
+==========================*/
+        .hero-slider {
+            position: relative;
+        }
+
+        .single-hs-item {
+            height: 700px;
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+        }
+
+            .single-hs-item:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: #000;
+                opacity: .6;
+            }
+
+        .item-bg1 {
+            background-image: url(images/banner_bhu_02.jpg);
+        }
+
+        .item-bg2 {
+            background-image: url(https://via.placeholder.com/1255x615);
+        }
+
+        .item-bg3 {
+            background-image: url(https://via.placeholder.com/1265x625);
+        }
+
+        .hero-text {
+            padding: 0 15px;
+            text-align: center;
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+            .hero-text h1 {
+                color: #fff;
+                font-size: 50px;
+                text-transform: capitalize;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            .hero-text p {
+                color: #fff;
+                font-size: 17px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                line-height: 30px;
+                margin-top: 20px;
+                margin-bottom: 35px;
+            }
+
+        .hero-slider .owl-item.active h1 {
+            -animation: 1s .3s fadeInUp both;
+        }
+
+        .hero-slider .owl-item.active p {
+            -webkit-animation: 1s .3s fadeInUp both;
+            animation: 1s .3s fadeInUp both;
+        }
+
+        .hero-slider .owl-item.active .slider-btn {
+            -webkit-animation: 1s .3s fadeInUp both;
+            animation: 1s .3s fadeInUp both;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev {
+            background-color: #2a2e78;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            color: #fff!important;
+            font-size: 30px;
+            margin: -40px 0 0;
+            border-radius: 0;
+            height: 50px;
+            width: 50px;
+        }
+
+        .owl-carousel .owl-nav button.owl-next {
+            background-color: #2a2e78;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            color: #fff!important;
+            font-size: 30px;
+            margin: -40px 0 0;
+            border-radius: 0;
+            height: 50px;
+            width: 50px;
+        }
+
+        .owl-theme .owl-nav {
+            margin-top: 0;
+        }
+
+        .owl-dots {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+            background: #2a2e78;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .single-hs-item {
+                height: 550px;
+            }
+
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+
+            .owl-carousel .owl-nav button.owl-next {
+                top: auto;
+                margin: 0;
+                bottom: 0px;
+            }
+
+            .owl-carousel .owl-nav button.owl-prev {
+                top: auto;
+                margin: 0;
+                bottom: 0px;
+            }
+
+            .owl-dots {
+                bottom: 10px;
+                left: 50px;
+                right: 50px;
+            }
+        }
+
         .navbar-dark .navbar-brand, .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
             color: #2a2e78 !important;
         }
+
         .mapouter {
             position: relative;
             text-align: right;
@@ -480,91 +678,50 @@
             </div>
         </div>
     </header>
-    <section class="section bg-light py-5  bottom-slant-gray" style="background-image: url('images/banner_bhu_02.jpg')!important;">
-        <div class="wrap">
-            <h1><strong>INDIAN SOCIETY OF ANAESTHESIOLOGISTS ISACONUP 2020</strong></h1>
-            <h1><strong>Annual State Conference of the Indian Society of Anaesthesiologists - Uttar Pradesh 2020</strong></h1>
-            <h1><strong><span class="icon-calendar mr-2"></span>02-04 October 2020 - Varanasi India</strong></h1>
-            <div class="countdown">
-                <div class="bloc-time hours" data-init-value="24">
-                    <span class="count-title">Hours</span>
-
-                    <div class="figure hours hours-1">
-                        <span class="top">2</span>
-                        <span class="top-back">
-                            <span>2</span>
-                        </span>
-                        <span class="bottom">2</span>
-                        <span class="bottom-back">
-                            <span>2</span>
-                        </span>
-                    </div>
-
-                    <div class="figure hours hours-2">
-                        <span class="top">4</span>
-                        <span class="top-back">
-                            <span>4</span>
-                        </span>
-                        <span class="bottom">4</span>
-                        <span class="bottom-back">
-                            <span>4</span>
-                        </span>
+    <section class="section bg-light  bottom-slant-gray">
+        <!-- Home Slider -->
+        <div id="home" class="hero-slider owl-carousel owl-theme">
+            <div class="single-hs-item item-bg1">
+                <div class="d-table">
+                    <div class="d-tablecell">
+                        <div class="hero-text">
+                            <h1>Animation Slider</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                            <div class="slider-btn">
+                                <a href="#" class="custom-btn1">Learn More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="bloc-time min" data-init-value="0">
-                    <span class="count-title">Minutes</span>
-
-                    <div class="figure min min-1">
-                        <span class="top">0</span>
-                        <span class="top-back">
-                            <span>0</span>
-                        </span>
-                        <span class="bottom">0</span>
-                        <span class="bottom-back">
-                            <span>0</span>
-                        </span>
-                    </div>
-
-                    <div class="figure min min-2">
-                        <span class="top">0</span>
-                        <span class="top-back">
-                            <span>0</span>
-                        </span>
-                        <span class="bottom">0</span>
-                        <span class="bottom-back">
-                            <span>0</span>
-                        </span>
+            </div>
+            <div class="single-hs-item item-bg2">
+                <div class="d-table">
+                    <div class="d-tablecell">
+                        <div class="hero-text">
+                            <h1>Animation Slider</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                            <div class="slider-btn">
+                                <a href="#" class="custom-btn1 mr-30">Learn More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="bloc-time sec" data-init-value="0">
-                    <span class="count-title">Seconds</span>
-
-                    <div class="figure sec sec-1">
-                        <span class="top">0</span>
-                        <span class="top-back">
-                            <span>0</span>
-                        </span>
-                        <span class="bottom">0</span>
-                        <span class="bottom-back">
-                            <span>0</span>
-                        </span>
-                    </div>
-
-                    <div class="figure sec sec-2">
-                        <span class="top">0</span>
-                        <span class="top-back">
-                            <span>0</span>
-                        </span>
-                        <span class="bottom">0</span>
-                        <span class="bottom-back">
-                            <span>0</span>
-                        </span>
+            </div>
+            <div class="single-hs-item item-bg3">
+                <div class="d-table">
+                    <div class="d-tablecell">
+                        <div class="hero-text">
+                            <h1>Animation Slider</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                            <div class="slider-btn">
+                                <a href="#" class="custom-btn1 mr-30">Learn More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- End Home Slider -->
     </section>
     <section class="section bg-light py-5 bottom-slant-gray">
         <div class="container">
@@ -676,9 +833,6 @@
                                         <!--<span class="time">09:00 am - 4:30 pm</span>-->
                                         <!--<p class="location"><span class="icon-map-o mr-2"></span>20 July 2019 - Hall, Building Los Angeles CA</p>-->
                                         <!--<h3 class="speaker-name">— <a href="#">Ryan Thompson</a> <span class="position">Founder of Wordpress</span></h3>-->
-                                        <div class="custom-video">
-                                            <iframe width="100%" height="375" src="https://www.youtube.com/embed/VUDtyhgeiUY" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1002,155 +1156,17 @@
             window.location.href = uriValue;
         }
         //http://isacon2020.com/index.php #F96D00 - > #2a2e78
-        $(document).ready(function () { $('#important-update').modal('show'); });
-    </script>
-    <!--<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="js/google-map.js"></script>-->
-    <!--
-    <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="5b673f80b68a358911aabf75-|49" defer=""></script>
-    -->
-    <script type="text/javascript">
-        // Create Countdown
-        var Countdown = {
-
-            // Backbone-like structure
-            $el: $('.countdown'),
-
-            // Params
-            countdown_interval: null,
-            total_seconds: 0,
-
-            // Initialize the countdown
-            init: function () {
-
-                // DOM
-                this.$ = {
-                    hours: this.$el.find('.bloc-time.hours .figure'),
-                    minutes: this.$el.find('.bloc-time.min .figure'),
-                    seconds: this.$el.find('.bloc-time.sec .figure')
-                };
-
-                // Init countdown values
-                this.values = {
-                    hours: this.$.hours.parent().attr('data-init-value'),
-                    minutes: this.$.minutes.parent().attr('data-init-value'),
-                    seconds: this.$.seconds.parent().attr('data-init-value'),
-                };
-
-                // Initialize total seconds
-                this.total_seconds = this.values.hours * 60 * 60 + (this.values.minutes * 60) + this.values.seconds;
-
-                // Animate countdown to the end
-                this.count();
-            },
-
-            count: function () {
-
-                var that = this,
-                    $hour_1 = this.$.hours.eq(0),
-                    $hour_2 = this.$.hours.eq(1),
-                    $min_1 = this.$.minutes.eq(0),
-                    $min_2 = this.$.minutes.eq(1),
-                    $sec_1 = this.$.seconds.eq(0),
-                    $sec_2 = this.$.seconds.eq(1);
-
-                this.countdown_interval = setInterval(function () {
-
-                    if (that.total_seconds > 0) {
-
-                        --that.values.seconds;
-
-                        if (that.values.minutes >= 0 && that.values.seconds < 0) {
-
-                            that.values.seconds = 59;
-                            --that.values.minutes;
-                        }
-
-                        if (that.values.hours >= 0 && that.values.minutes < 0) {
-
-                            that.values.minutes = 59;
-                            --that.values.hours;
-                        }
-
-                        // Update DOM values
-                        // Hours
-                        that.checkHour(that.values.hours, $hour_1, $hour_2);
-
-                        // Minutes
-                        that.checkHour(that.values.minutes, $min_1, $min_2);
-
-                        // Seconds
-                        that.checkHour(that.values.seconds, $sec_1, $sec_2);
-
-                        --that.total_seconds;
-                    }
-                    else {
-                        clearInterval(that.countdown_interval);
-                    }
-                }, 1000);
-            },
-
-            animateFigure: function ($el, value) {
-
-                var that = this,
-                    $top = $el.find('.top'),
-                    $bottom = $el.find('.bottom'),
-                    $back_top = $el.find('.top-back'),
-                    $back_bottom = $el.find('.bottom-back');
-
-                // Before we begin, change the back value
-                $back_top.find('span').html(value);
-
-                // Also change the back bottom value
-                $back_bottom.find('span').html(value);
-
-                // Then animate
-                TweenMax.to($top, 0.8, {
-                    rotationX: '-180deg',
-                    transformPerspective: 300,
-                    ease: Quart.easeOut,
-                    onComplete: function () {
-
-                        $top.html(value);
-
-                        $bottom.html(value);
-
-                        TweenMax.set($top, { rotationX: 0 });
-                    }
-                });
-
-                TweenMax.to($back_top, 0.8, {
-                    rotationX: 0,
-                    transformPerspective: 300,
-                    ease: Quart.easeOut,
-                    clearProps: 'all'
-                });
-            },
-
-            checkHour: function (value, $el_1, $el_2) {
-
-                var val_1 = value.toString().charAt(0),
-                    val_2 = value.toString().charAt(1),
-                    fig_1_value = $el_1.find('.top').html(),
-                    fig_2_value = $el_2.find('.top').html();
-
-                if (value >= 10) {
-
-                    // Animate only if the figure has changed
-                    if (fig_1_value !== val_1) this.animateFigure($el_1, val_1);
-                    if (fig_2_value !== val_2) this.animateFigure($el_2, val_2);
-                }
-                else {
-
-                    // If we are under 10, replace first figure with 0
-                    if (fig_1_value !== '0') this.animateFigure($el_1, 0);
-                    if (fig_2_value !== val_1) this.animateFigure($el_2, val_1);
-                }
-            }
-        };
-
-        // Let's go !
-        Countdown.init();
+        $(document).ready(function () {
+            $('#important-update').modal('show');
+            $('.hero-slider').owlCarousel({
+                animateOut: 'slideOutDown',
+                animateIn: 'heartBeat',
+                items: 1,
+                loop: false,
+                nav: true,
+                dots: true,
+            });
+        });
     </script>
 </body>
 </html>
