@@ -1,0 +1,1341 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The ISACON - 2020&nbsp;Varanasi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+        .mapouter {
+            position: relative;
+            text-align: right;
+            height: 100%;
+            width: 100%;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 100%;
+            width: 100%;
+        }
+
+        .navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+            color: #2a2e78 !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #000 !important;
+            font-weight: 700;
+        }
+
+        .testimony-wrap .user-img-fake {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .user-img-fake {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .wrap {
+            position: relative;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 540px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+
+        h1 {
+            margin-bottom: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-variant-numeric: normal;
+            font-variant-east-asian: normal;
+            font-weight: 300;
+            font-stretch: normal;
+            font-size: 2.25em;
+            line-height: normal;
+            font-family: nunito sans,Arial,sans-serif;
+        }
+
+            h1 strong {
+                font-weight: 400;
+                /*color: #ea4c4c;*/
+                color: #fff;
+            }
+
+        .countdown {
+            width: 720px;
+            margin: 0 auto;
+        }
+
+            .countdown .bloc-time {
+                float: left;
+                margin-right: 45px;
+                text-align: center;
+            }
+
+                .countdown .bloc-time:last-child {
+                    margin-right: 0;
+                }
+
+            .countdown .count-title {
+                display: block;
+                margin-bottom: 15px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-variant-numeric: normal;
+                font-variant-east-asian: normal;
+                font-weight: normal;
+                font-stretch: normal;
+                font-size: 0.94em;
+                line-height: normal;
+                font-family: nunito sans,Arial,sans-serif;
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            .countdown .figure {
+                position: relative;
+                float: left;
+                height: 110px;
+                width: 100px;
+                margin-right: 10px;
+                background-color: #fff;
+                border-radius: 8px;
+                -moz-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+                -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+                box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+            }
+
+                .countdown .figure:last-child {
+                    margin-right: 0;
+                }
+
+                .countdown .figure > span {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-variant-numeric: normal;
+                    font-variant-east-asian: normal;
+                    font-weight: 700;
+                    font-stretch: normal;
+                    font-size: 5.94em;
+                    line-height: 107px;
+                    font-family: nunito sans,Arial,sans-serif;
+                    font-weight: 700;
+                    color: #2a2e78;
+                }
+
+                .countdown .figure .top:after, .countdown .figure .bottom-back:after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                }
+
+                .countdown .figure .top {
+                    z-index: 3;
+                    background-color: #f7f7f7;
+                    transform-origin: 50% 100%;
+                    -webkit-transform-origin: 50% 100%;
+                    -moz-border-radius-topleft: 10px;
+                    -webkit-border-top-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    -moz-border-radius-topright: 10px;
+                    -webkit-border-top-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                    -moz-transform: perspective(200px);
+                    -ms-transform: perspective(200px);
+                    -webkit-transform: perspective(200px);
+                    transform: perspective(200px);
+                }
+
+                .countdown .figure .bottom {
+                    z-index: 1;
+                }
+
+                    .countdown .figure .bottom:before {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 50%;
+                        background-color: rgba(0, 0, 0, 0.02);
+                    }
+
+                .countdown .figure .bottom-back {
+                    z-index: 2;
+                    top: 0;
+                    height: 50%;
+                    overflow: hidden;
+                    background-color: #f7f7f7;
+                    -moz-border-radius-topleft: 10px;
+                    -webkit-border-top-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    -moz-border-radius-topright: 10px;
+                    -webkit-border-top-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+
+                    .countdown .figure .bottom-back span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+
+                .countdown .figure .top, .countdown .figure .top-back {
+                    height: 50%;
+                    overflow: hidden;
+                    -moz-backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                }
+
+                .countdown .figure .top-back {
+                    z-index: 4;
+                    bottom: 0;
+                    background-color: #fff;
+                    -webkit-transform-origin: 50% 0;
+                    transform-origin: 50% 0;
+                    -moz-transform: perspective(200px) rotateX(180deg);
+                    -ms-transform: perspective(200px) rotateX(180deg);
+                    -webkit-transform: perspective(200px) rotateX(180deg);
+                    transform: perspective(200px) rotateX(180deg);
+                    -moz-border-radius-bottomleft: 10px;
+                    -webkit-border-bottom-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    -moz-border-radius-bottomright: 10px;
+                    -webkit-border-bottom-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+
+                    .countdown .figure .top-back span {
+                        position: absolute;
+                        top: -100%;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .navbar-dark .navbar-toggler {
+            color: #2a2e78;
+            border-color: #2a2e78;
+        }
+
+        .navbar-toggler {
+            border: 1px solid #2a2e78;
+        }
+
+        .wrap-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 30px;
+            border-radius: 50%;
+            position: relative;
+            display: block;
+            background: #2a2e78;
+        }
+
+            .wrap-icon > span {
+                font-size: 2rem;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+
+        .navbar-dark .navbar-nav .nav-link {
+            font-weight: 700;
+        }
+
+        #skippy {
+            display: block;
+            padding: 1em;
+            color: #2a2e78;
+            background-color: #fff;
+            outline: 0;
+        }
+
+        .old-bv {
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        .bd-navbar {
+            min-height: 4rem;
+            background-color: #fff;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+        }
+
+        .slider-text h1, .slider-text h1 span, .slider-text p, #timer .time, #timer .time span {
+            color: #2a2e78 !important;
+        }
+
+        .table-header-content {
+            background: #2a2e78 !important;
+            border-color: #2a2e78 !important;
+            color: #fff !important;
+        }
+
+        .text-align-middle {
+            vertical-align: middle !important;
+        }
+
+        .text-strike-through {
+            text-decoration: line-through;
+        }
+
+        .logo-action-head {
+            font-weight: 600;
+            font-size: 20px;
+            text-transform: uppercase;
+            display: flex;
+        }
+
+        .logo-action-title {
+            font-size: 11px;
+            color: #2a2e78 !important;
+            text-transform: none;
+            display: flex;
+        }
+
+        .logo-action:hover, .logo-action:focus {
+            color: #000 !important;
+        }
+    </style>
+</head>
+<body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+    <a class="d-block px-3 py-2 text-center text-bold old-bv" style="border-bottom: 1px solid #e9ecef;">
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="8">
+            <strong>
+                Make your reservations at the earliest possible, October is a peak season. End minute reservations will
+                be
+                subjected to availability. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Early Bird Registration Closed. Register
+                Soon…!!! Avail the Third Bracket till 02<sup>nd</sup> October 2020
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Abstract submission</strong> is now closed.
+            </strong>
+        </marquee>
+    </a>
+    <header class="navbar navbar-expand-md bg-white navbar-dark" id="ftco-navbar">
+        <a class="navbar-brand" href="/">
+            <img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 46px;" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="index.html">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="index.html#about-overview">
+                        About Us
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="faculty.html">
+                        Faculty
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="program.html">
+                        Program
+                    </a>
+                </li>
+                <li class="nav-item active dropdown">
+                    <a class="nav-link p-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Committee
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="organizing-committee.html">ISA National Committte</a>
+                        <a class="dropdown-item active" href="organizing-committee.html">ISACONUP 2020 Committee</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="registration.html">
+                        Registration
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="abstract.html">
+                        Abstract
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="accommodation.html">
+                        Accommodation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="trade.html">
+                        Trade
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="venue.html">
+                        Venue
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link p-2" href="#contact-overview">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="section bg-light py-5 bottom-slant-gray">
+        <div class="container">
+            
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+            
+          <div class="container-fluid" style="width: 100%; padding-left: 0px; padding-right: 0px; padding-bottom: 20px">
+        <div class="cp-inner-banner" id="cp-inner-council">
+            <div class="container">
+                <div class="cp-inner-banner-outer">
+                    <h1 style="font-size:40px;color: #2b2d79; font-weight: bold;">ISA Governing Council</h1>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row abt" style="margin-bottom: 50px;">
+            
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img src="images/Bikramgupta.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl00_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">PRESIDENT</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl00_Label5">DR MURALIDHAR JOSHI</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl00_Label6">102, NAVEENA RESIDENCY, PLOT NO. 39A, ROAD NO. 2, FILM NAGAR, JUBILEE HILLS, RANGA REDDY, HYDERABAD - 500096, TELANGANA </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl00_Label7">9949049946</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl00_Label8">drmuralidharjoshi@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl01_Image1" class="acircle" src="../ElectionContent/images/image636049051495746250.jpeg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl01_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">VICE PRESIDENT</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl01_Label5">DR. SURESH KUMAR BHARGAVA</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl01_Label6">C-1/516, VASHAIST PATH, CHITRAKOOT, VAISHALI NAGAR, JAIPUR-302021, RAJASTHAN </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl01_Label7">9829063830</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl01_Label8">suresh3559@yahoo.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl02_Image1" class="acircle" src="../MemberUploads/MemberPhoto/Venkatagiri.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl02_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">PRESIDENT ELECT</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl02_Label5">DR VENKATAGIRI K M</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl02_Label6">ASHWATHI, OPP AYYAPPA TEMPLE, NULLIPPADY, KASARAGOD - 671121, KERALA</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl02_Label7">9447030395</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl02_Label8">drvenkatagiri@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl03_Image1" class="acircle" src="../MemberUploads/MemberPhoto/Dr%20Naveen%20Malhotra636128459778906250.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl03_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">HONORARY SECRETARY</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl03_Label5">DR NAVEEN MALHOTRA</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl03_Label6">"NAVEEN NIKETAN", 128/19, DOCTORS LANE, NEAR CIVIL HOSPITAL,                                                     ROHTAK-124001, HARYANA</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl03_Label7">9812091051</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl03_Label8">drnaveenmalhotra@yahoo.co.in</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl04_Image1" class="acircle" src="../MemberUploads/MemberPhoto/VirenderSharma.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl04_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">TREASURER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl04_Label5">DR VIRENDRA SHARMA</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl04_Label6">9/562, INDIRA NAGAR, LUCKNOW- 226016, UTTAR PRADESH </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl04_Label7">9415142460</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl04_Label8">virendra_doc@yahoo.co.in</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl05_Image1" class="acircle" src="../ElectionContent/images/image636130487382923750.jpeg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl05_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">EDITOR IN CHIEF</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl05_Label5">DR. LALIT MEHDIRATTA</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl05_Label6">64, AMRAPALI ENCLAVE, CHUNABHATI, BHOPAL-426016, MADHYA PRADESH </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl05_Label7">9826252693</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl05_Label8">lalitmehdiratta9@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl06_Image1" class="acircle" src="../MemberUploads/MemberPhoto/Photo%20SBB636349298199180000.png" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl06_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">PAST PRESIDENT</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl06_Label5">DR S BALA BHASKAR</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl06_Label6">3/H.B.COLONY, PARVATHI NAGAR, BELLARY - 583103, KARNATAKA</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl06_Label7">9880012349</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl06_Label8">sbalabhaskar@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl07_Image1" class="acircle" src="../MemberUploads/MemberPhoto/HameedCA636023851881845000.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl07_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">PAST TREASURER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl07_Label5">DR C A ABDUL HAMEED</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl07_Label6">AL-MAFAZAH, NEAR CAREWELL HOSPITAL, NULLIPPADY, KASARAGOD- 671121, KERALA </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl07_Label7">9447010151</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl07_Label8">drhameedca@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl08_Image1" class="acircle" src="../Attachment/60463111_DR%20J%20VASISHTHA%20DIVATIA.png" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl08_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">PAST EDITOR IN CHIEF</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl08_Label5">DR. J. V. DIVATIA</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl08_Label6">A-16, SHATDAL AZAD LANE, ANDHERI WEST, MUMBAI- 400058, MAHARASHTRA
+</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl08_Label7">9869077435</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl08_Label8">ijadivatia@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl09_Image1" class="acircle" src="../MemberUploads/MemberPhoto/Manoj636128239372920000.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl09_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">GC MEMBER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl09_Label5">DR MANOJ KUMAR</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl09_Label6">C/O MANYA NURSING HOME, NALA ROAD, SHIVPURI, NALANDA, BIHAR SHARIF- 803101, BIHAR </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl09_Label7">9801804962</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl09_Label8">manojbiharsharif@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl10_Image1" class="acircle" src="../MemberUploads/MemberPhoto/img382636128399873125000.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl10_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">GC MEMBER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl10_Label5">DR SUKHMINDER JIT SINGH BAJWA</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl10_Label6">H.NO.27, ARATAN NAGAR, TRIPURI TOWN, PATIALA - 147001, PUNJAB </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl10_Label7">9915025828</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl10_Label8">sukhminder_bajwa2001@yahoo.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl11_Image1" class="acircle" src="../MemberUploads/MemberPhoto/bala%20photo.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl11_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">GC MEMBER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl11_Label5">DR J BALAVENKATA SUBRAMANIAN</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl11_Label6">217, DR.SUBBARAYAN ROAD, TATABAD, COIMBATORE- 641012, TAMIL NADU  </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl11_Label7">9842245757</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl11_Label8">drbalavenkat@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl12_Image1" class="acircle" src="../Attachment/1169695993_GANESH%20PRABHU.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl12_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">GC MEMBER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl12_Label5">DR S C GANESH PRABHU</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl12_Label6">80, THENI ROAD, P P CHAVADI, MADURAI-625016, TAMIL NADU </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl12_Label7">9443496835</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl12_Label8">drgp60@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl13_Image1" class="acircle" src="../MemberUploads/MemberPhoto/Dr%20Rajiv636762845279706250.png" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl13_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">GC MEMBER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl13_Label5">DR. RAJIV GUPTA</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl13_Label6">C-38, 2ND FLOOR, ASHOK VIHAR, PHASE - I, DELHI-110052 </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl13_Label7">9811084288</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl13_Label8">rajiv_rita@yahoo.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl14_Image1" class="acircle" src="../Attachment/153327991_bharast%20bhushan%20pic.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl14_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">GC MEMBER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl14_Label5">DR. BHARAT BHUSHAN BHARDWAJ</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl14_Label6">29-D, AWAS VIKAS COLONY, MALL AVENUE, BSP OFFICE, LUCKNOW-226002,  UTTAR PRADESH </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl14_Label7">9889822922</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl14_Label8">bharatbbhardwaj@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl15_Image1" class="acircle" src="../MemberUploads/MemberPhoto/14117789_10154013564884195_681873803545317932_n636168843196637500.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl15_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">GC MEMBER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl15_Label5">DR. SURAJIT GIRI</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl15_Label6">POST OFFICE - NAMTIAL PATHAR, PIOLI NAGAR, POROMANANDA PATH, NH37, NRL PETROL PUMP, SIVASAGAR-785697, ASSAM  </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl15_Label7">9435056627</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl15_Label8">drsurajitgiri@outlook.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl16_Image1" class="acircle" src="../ElectionContent/images/avd%20foto%2023636051524529360000.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl16_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">GC MEMBER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl16_Label5">DR. ASHOK VASANTA RAO DESHPANDE</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl16_Label6">SANJIVAN  HOSPITAL, S.T. COLONY ROAD, NEMINATH  NAGAR, VISHRAMBAG, SANGLI-416415, MAHARASHTRA </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl16_Label7">9422041424</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl16_Label8">drashokvdeshpande@yahoo.co.in</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl17_Image1" class="acircle" src="../ElectionContent/images/Chintala%20Kishan636416092900396250.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl17_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">GC MEMBER</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl17_Label5">DR. CHINTALA  KISHAN</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl17_Label6">PLOT NO.30, H.NO. 1-12-123/7, SAI NAGAR, PRAGATHI NAGAR, NIZAMABAD -503001, TELANGANA </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl17_Label7">9848071377</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl17_Label8">chintala_kishan@yahoo.in</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl18_Image1" class="acircle" src="../MemberUploads/MemberPhoto/Sugu00636128455665937500.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl18_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">Secretary Family Benevolent Fund (Ex Officio)</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl18_Label5">DR. SUGU VARGHESE</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl18_Label6">PARAMBILOTH HOUSE, SALEEM - RAJAN ROAD, ELAMKULAM, COCHIN -682017, KERALA </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl18_Label7">9447052094</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl18_Label8">sugulissieux@rediffmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+                    <div class="col-md-4">
+                        <div class="row" style="width: 100%;margin: 10px auto;">
+                            <blockquote class="ablkqt " style="width: 100%;min-height: 370px;">
+                                <div class="col-md-12 text-center">
+
+
+                                    <img id="ctl00_ContentPlaceHolder1_ddlGC_ctl19_Image1" class="acircle" src="../Attachment/1212784504_dr_bhadresh_shah.jpg" style="border-width:0px;border-radius: 76px; margin-bottom: 10px; height: 100px; width: 100px;" />
+                                    <br />
+                                    <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl19_Label4" style="font-size:Large;color: #2b2d79; font-weight: bold;">ORG SECRETARY 68TH ISACON 2020 (EX OFFICIO)</span>
+
+
+                                    <div class="">
+                                        <span style="font-family: 'Yanone Kaffeesatz',sans-serif; font-size: 18px;"><strong>
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl19_Label5">DR. BHADRESH ARVIND SHAH</span></strong></span>
+                                    </div>
+                                    <div class="">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl19_Label6">12,SHREE MANDAR VARDHMAN SOC, NEAR KOTHARI TOWER, OPP. SIDDHARTH FLATS, RAMNAGAR, SABARMATI, AHMEDABAD-380005, GUJARAT </span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl19_Label7">9825288988</span></span>
+                                    </div>
+                                    <div class="" style="width: 100%;display:none">
+                                        <span style="color: #6d6e71; font-size: 15px;">
+                                            <span id="ctl00_ContentPlaceHolder1_ddlGC_ctl19_Label8">b88988@gmail.com</span></span>
+                                    </div>
+
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                
+        </div>
+    </div>
+
+            <div class="modal" id="myModal4" role="dialog" data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="color: #413e66">Alert!</h4>
+                        </div>
+                        <div class="modal-body" style="text-align: center">
+                            <div class="form-group">
+                                <label class="control-label" for="email">
+                                    
+                                ISA ELECTIONS 2019 VOTING<br />
+                                    1 Nov 08:00AM - 05 Nov 05:00PM
+                                   
+                                
+                                    
+                                    <br />
+
+                                    
+                                    <button type="button" value="Click" class="btn btn-default" style="background-color: #413e66; color: White; border: none" onclick="pageRedirect()">View Result</button>
+                                    <button type="button" value="Click" class="btn btn-default" style="background-color: #f15b4e; color: White; border: none" onclick="pageRedirect1()">Results Continued</button>
+
+
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <b style="color: red">Please Note - </b>Associate Life Members, Inactive Members, Semi active Members & Members joining after 29 Nov 2018 are NOT eligible to Vote .
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="form-group">
+
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer id="footer" class="section-bg">
+                <div class="footer-top">
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col-lg-8">
+
+                                <div class="row">
+
+                                    <div class="col-sm-6">
+
+                                        
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section contact-section" id="contact-overview">
+        <div class="container">
+            <div class="row d-flex mb-5 contact-info">
+                <div class="col-md-12 mb-4 text-center heading-section ftco-animate">
+                    <h2 class="mb-3">Contact Information</h2>
+                </div>
+            </div>
+            <div class="row block-9">
+                <div class="col-md-6 order-md-last d-flex">
+                    <form action="#" class="bg-light p-5 contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe width="100%" height="558" id="gmap_canvas" src="https://maps.google.com/maps?q=Swatantrata%20Bhavan%2C%20Hindu%20University%2C%20Varanasi%2C%20Uttar%20Pradesh%20221005&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-100"></div>
+            <div class="row block-9" style="padding-top: 3rem;">
+                <div class="col-md-6 order-md-last d-flex">
+                    <form action="javascript:void(0);" class="bg-light p-5 contact-form">
+                        <b>CONFERENCE SECRETARIAT</b><br />
+                        <!--<img src="images/isaconup-2020.jpg" alt="images/isaconup-2020.jpg" style="width: 190px; height: 60px;" /><br />-->
+                        Dept of Anaesthesiology<br />
+                        Dr. Bikram Gupta - Org. Secretary<br />
+                        1st Floor, Main OT complex<br />
+                        Sir Sunderlal Hospital, Banaras Hindu University<br />
+                        Varanasi-221005<br />
+                        Email: bikramgupta03@gmail.com<br />
+                        Tel- (O) +91 542 2309419 (M) 9415986684
+                    </form>
+                </div>
+                <div class="col-md-6 d-flex">
+                    <form action="javascript:void(0);" class="bg-light p-5 contact-form">
+                        <b>CONFERENCE MANAGER</b><br />
+                        <img src="images/cim-logo.png" alt="images/cim-logo.png" style="width: 190px; height: 60px;" /><br />
+                        <b>CIMGlobal India Pvt. Ltd.</b><br />
+                        Suite No. 309, DLF City Court, MG Road<br />
+                        Gurgaon 122 004, Haryana, India<br />
+                        Tel: +91-124 46 17 700<br />
+                        Email: info@cimglobal.net<br />
+                        Ms. Megha Abrol<br />
+                        Email: megha@cimglobal.net<br />
+                        Mobile: +91 8800385148
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section" style="padding: 1em 0;background: #2a2e78!important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Copyright &copy; ISACONUP &reg; 2020
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#2a2e78" /></svg>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="important-update">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" style="font-weight:700;">Important Update</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <b>Quiz contest</b> will be an additional attraction of ISACONUP 2020. It will be held on <b>7th Feb 2020 from 1530-1730 hrs</b>. Interested delegates are <b>invited</b> to participate as a team. Each team comprising two participants. The theme of the <b>Quiz contest</b> will be Anaesthesia, Emergency & Critical Care. The last date of submission of names will be 31.01.2020<br />
+                        E-mail: <a href="mailto:ravindracs0071@gmail.com" title="ravindracs0071@gmail.com">ravindracs0071@gmail.com</a>.<br />
+                        Winner team will be suitably Rewarded. All participants will receive a <b>Certificate of participation</b>.
+                        <hr />
+                    </p>
+                    <p>
+                        Gentle reminder regarding <b>accommodation requirements during the conference (7-9 February 2020)</b>. As during the month of February there will be <b>heavy rush</b> of Tourist, hence we request you to kindly inform us regarding your accommodation requirements at the earliest <b>by sending One Day Room Rent in advance</b>.<br />
+                        For <b>Radisson hotel</b> kindly mail to Dr. Bikram Gupta E: <a href="mailto:bikramgupta03@gmail.com">bikramgupta03@gmail.com</a>, <a href="mailto:isaconup2020@gmail.com">isaconup2020@gmail.com</a>
+                    </p>
+                    <p>
+                        For <b>Other supporting conference hotels</b> kindly e-mail to Dr. Bikram Gupta E: <a href="mailto:bikramgupta03@gmail.com">bikramgupta03@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        function navUrl(uriValue) {
+            window.location.href = uriValue;
+        }
+    </script>
+</body>
+</html>
