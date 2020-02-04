@@ -1,7 +1,6 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
 <head>
-    <title>The ISACON - 2020&nbsp;Varanasi</title>
+    <title>ISACON - 2020&nbsp;Varanasi</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
@@ -18,6 +17,239 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <style type="text/css">
+        .owl-carousel:hover .owl-nav .owl-prev {
+            left: 0px !important;
+        }
+        .owl-carousel:hover .owl-nav .owl-next {
+            right: 0px !important;    
+        }
+        .owl-theme .owl-dots .owl-dot span {
+            width: 10px !important;
+            height: 10px !important;
+            margin: 0px 0px !important;
+        }
+            body {
+            font-family: nunito sans,Arial,sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .d-table {
+            width: 100%;
+            height: 100%;
+            display: table;
+        }
+
+        .d-tablecell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .custom-btn1 {
+            background-color: #2a2e78;
+            color: #fff;
+            border: 1px solid #2a2e78;
+            display: inline-block;
+            padding: 12px 30px;
+            text-transform: uppercase;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+            .custom-btn1:hover {
+                background-color: transparent;
+                text-decoration: none;
+                color: #fff;
+            }
+        /*
+Hero slider style
+==========================*/
+        .hero-slider {
+            position: relative;
+        }
+
+        .single-hs-item {
+            height: 700px;
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+        }
+
+            .single-hs-item:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: #000;
+                opacity: .6;
+            }
+
+        .item-bg1 {
+            background-image: url(images/banner_bhu_01.jpg);
+        }
+
+        .item-bg2 {
+            background-image: url(images/banner_bhu_02.jpg);
+        }
+
+        .item-bg3 {
+            background-image: url(images/banner_bhu_03.jpg);
+        }
+		.item-bg4 {
+            background-image: url(images/banner_bhu_04.jpg);
+        }
+		.item-bg5 {
+            background-image: url(images/banner_bhu_05.jpg);
+        }
+		.item-bg6 {
+            background-image: url(images/banner_bhu_06.jpg);
+        }
+		.item-bg7 {
+            background-image: url(images/banner_bhu_07.jpg);
+        }
+		.item-bg8 {
+            background-image: url(images/banner_bhu_08.jpg);
+        }
+		.item-bg9 {
+            background-image: url(images/banner_bhu_09.jpg);
+        }
+		.item-bg10 {
+            background-image: url(images/banner_bhu_10.jpg);
+        }
+		.item-bg11 {
+            background-image: url(images/banner_bhu_11.jpg);
+        }.item-bg12 {
+            background-image: url(images/banner_bhu_12.jpg);
+        }.item-bg13 {
+            background-image: url(images/banner_bhu_13.jpg);
+        }.item-bg14 {
+            background-image: url(images/banner_bhu_14.jpg);
+        }.item-bg15 {
+            background-image: url(images/banner_bhu_15.jpg);
+        }
+
+        .hero-text {
+            padding: 0 15px;
+            text-align: center;
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+            .hero-text h1 {
+                color: #fff;
+                font-size: 50px;
+                text-transform: capitalize;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            .hero-text p {
+                color: #fff;
+                font-size: 17px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                line-height: 30px;
+                margin-top: 20px;
+                margin-bottom: 35px;
+            }
+
+        .hero-slider .owl-item.active h1 {
+            -animation: 1s .3s fadeInUp both;
+        }
+
+        .hero-slider .owl-item.active p {
+            -webkit-animation: 1s .3s fadeInUp both;
+            animation: 1s .3s fadeInUp both;
+        }
+
+        .hero-slider .owl-item.active .slider-btn {
+            -webkit-animation: 1s .3s fadeInUp both;
+            animation: 1s .3s fadeInUp both;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev {
+            background-color: #2a2e78;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            color: #fff!important;
+            font-size: 30px;
+            margin: -40px 0 0;
+            border-radius: 0;
+            height: 50px;
+            width: 50px;
+        }
+
+        .owl-carousel .owl-nav button.owl-next {
+            background-color: #2a2e78;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            color: #fff!important;
+            font-size: 30px;
+            margin: -40px 0 0;
+            border-radius: 0;
+            height: 50px;
+            width: 50px;
+        }
+
+        .owl-theme .owl-nav {
+            margin-top: 0;
+        }
+
+        .owl-dots {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+            background: #2a2e78;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .single-hs-item {
+                height: 550px;
+            }
+
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+
+            .owl-carousel .owl-nav button.owl-next {
+                top: auto;
+                margin: 0;
+                bottom: 0px;
+            }
+
+            .owl-carousel .owl-nav button.owl-prev {
+                top: auto;
+                margin: 0;
+                bottom: 0px;
+            }
+
+            .owl-dots {
+                bottom: 10px;
+                left: 50px;
+                right: 50px;
+            }
+        }
+
+        .navbar-dark .navbar-brand, .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+            color: #2a2e78 !important;
+        }
+
         .mapouter {
             position: relative;
             text-align: right;
@@ -384,108 +616,103 @@
             </strong>
         </marquee>
     </a>
-    <header class="navbar navbar-expand-md bg-white navbar-dark" id="ftco-navbar">
-        <a class="navbar-brand" href="/">
-            <img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 46px;" />
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="index.html">
-                        Home
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="index.html#about-overview">
-                        About
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="faculty.html">
-                        Faculty
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="program.html">
-                        Program
-                    </a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link p-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Committee
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="organizing-committee.html">ISA National Committte</a>
-                        <a class="dropdown-item" href="organizing-committee.html">ISACONUP 2020 Committee</a>
+    <div class="navbar navbar-expand-md bg-white navbar-dark" style="border-bottom: 1px solid #e9ecef;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 60px;" />
+				<img src="images/logo_bhu.png" alt="images/logo-bhu.png" style="width: 82px; height: 60px;" />
+				<img src="images/logo_ims.png" alt="images/logo-ims.png" style="width: 82px; height: 60px;" />
+            </a>
+            <div>
+                <div class="conference-banners">
+                    
+                    <div class="conference-date text-center float-right" style="padding-left:.3rem!important;padding-right:.3rem!important;">
+                        <h3 style="font-size: 20px;font-weight: 600;margin-bottom: 0;color: #2a2e78;">Conference</h3>
+                        <img src="images/conference_date.png" alt="workshop_date.png" />
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="registration.html">
-                        Registration
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="abstract.html">
-                        Abstract
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="accommodation.html">
-                        Accommodation
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="trade.html">
-                        Trade
-                    </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link p-2" href="venue.html">
-                        Venue
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link p-2" href="#contact-overview">
-                        Contact
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </header>
-
-    <section class="section bg-light py-5 bottom-slant-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
-                     data-aos-delay="">
-                    <span class="wrap-icon"><span class="icon-edge d-block mb-4"></span></span>
-                    <h3 class="mb-2 text-primary">Registration</h3>
-                    <p>Third Bracket till 31<sup>st</sup> January 2020</p>
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
-                     data-aos-delay="">
-                    <span class="wrap-icon"><span class="icon-event_note d-block mb-4"></span></span>
-                    <h3 class="mb-2 text-primary">Date</h3>
-                    <p>2nd-4th October 2020</p>
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
-                     data-aos-delay="">
-                    <span class="wrap-icon"><span class="icon-map-marker d-block mb-4"></span></span>
-                    <h3 class="mb-2 text-primary">Venue</h3>
-                    <p>Swatantrata Bhawan, BHU</p>
-                </div>
-                <div class="col-md-6 mb-4 mb-lg-5 col-lg-3 text-left service-block aos-init aos-animate" data-aos="fade-up"
-                     data-aos-delay="">
-                    <span class="wrap-icon"><span class="icon-location-arrow d-block mb-4"></span></span>
-                    <h3 class="mb-2 text-primary">Location</h3>
-                    <p>Varanasi, India</p>
+                    <div class="workshop-date text-center float-right" style="padding-left:.3rem!important;padding-right:.3rem!important;">
+                        <h3 style="font-size: 20px;font-weight: 600;margin-bottom: 0;color: #2a2e78;">Workshops</h3>
+                        <img src="images/workshop_date.png" alt="workshop_date.png" />
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <header class="navbar navbar-expand-md navbar-light bg-light navbar-dark" id="ftco-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" style="font-weight: 700;">
+                <!--<img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 46px;" />-->
+				<!--<img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 46px;" />-->
+                ISACONUP-2020
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link p-2" href="javascript:void(0);">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="about.html">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="faculty.html">
+                            Faculty
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="program.html">
+                            Scientific Program
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link p-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Committee
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="isa _governing _council.html">ISA Governing Council</a>
+                            <a class="dropdown-item" href="organizing-committee.html">ISACONUP 2020 Committee</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="registration.html">
+                            Registration
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="abstract.html">
+                            Abstract
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="accommodation.html">
+                            Accommodation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="trade.html">
+                            Trade
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link p-2" href="venue.html">
+                            Venue
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
     <section class="ftco-section ftco-no-pt ftco-no-pb">
         <div class="container">
