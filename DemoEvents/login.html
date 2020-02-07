@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ISACON - 2020&nbsp;Varanasi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+        .owl-carousel:hover .owl-nav .owl-prev {
+            left: 0px !important;
+        }
+        .owl-carousel:hover .owl-nav .owl-next {
+            right: 0px !important;    
+        }
+        .owl-theme .owl-dots .owl-dot span {
+            width: 10px !important;
+            height: 10px !important;
+            margin: 0px 0px !important;
+        }
+            body {
+            font-family: nunito sans,Arial,sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .d-table {
+            width: 100%;
+            height: 100%;
+            display: table;
+        }
+
+        .d-tablecell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .custom-btn1 {
+            background-color: #2a2e78;
+            color: #fff;
+            border: 1px solid #2a2e78;
+            display: inline-block;
+            padding: 12px 30px;
+            text-transform: uppercase;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+            .custom-btn1:hover {
+                background-color: transparent;
+                text-decoration: none;
+                color: #fff;
+            }
+        /*
+Hero slider style
+==========================*/
+        .hero-slider {
+            position: relative;
+        }
+
+        .single-hs-item {
+            height: 700px;
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+        }
+
+            .single-hs-item:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background-color: #000;
+                opacity: .6;
+            }
+
+        
+        }
+
+        .hero-text {
+            padding: 0 15px;
+            text-align: center;
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+            .hero-text h1 {
+                color: #fff;
+                font-size: 50px;
+                text-transform: capitalize;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            .hero-text p {
+                color: #fff;
+                font-size: 17px;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+                line-height: 30px;
+                margin-top: 20px;
+                margin-bottom: 35px;
+            }
+
+        .hero-slider .owl-item.active h1 {
+            -animation: 1s .3s fadeInUp both;
+        }
+
+        .hero-slider .owl-item.active p {
+            -webkit-animation: 1s .3s fadeInUp both;
+            animation: 1s .3s fadeInUp both;
+        }
+
+        .hero-slider .owl-item.active .slider-btn {
+            -webkit-animation: 1s .3s fadeInUp both;
+            animation: 1s .3s fadeInUp both;
+        }
+
+        .owl-carousel .owl-nav button.owl-prev {
+            background-color: #2a2e78;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            color: #fff!important;
+            font-size: 30px;
+            margin: -40px 0 0;
+            border-radius: 0;
+            height: 50px;
+            width: 50px;
+        }
+
+        .owl-carousel .owl-nav button.owl-next {
+            background-color: #2a2e78;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            color: #fff!important;
+            font-size: 30px;
+            margin: -40px 0 0;
+            border-radius: 0;
+            height: 50px;
+            width: 50px;
+        }
+
+        .owl-theme .owl-nav {
+            margin-top: 0;
+        }
+
+        .owl-dots {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 20px;
+        }
+
+        .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+            background: #2a2e78;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .single-hs-item {
+                height: 550px;
+            }
+
+            .hero-text h1 {
+                font-size: 30px;
+            }
+
+            .hero-text p {
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+
+            .owl-carousel .owl-nav button.owl-next {
+                top: auto;
+                margin: 0;
+                bottom: 0px;
+            }
+
+            .owl-carousel .owl-nav button.owl-prev {
+                top: auto;
+                margin: 0;
+                bottom: 0px;
+            }
+
+            .owl-dots {
+                bottom: 10px;
+                left: 50px;
+                right: 50px;
+            }
+        }
+
+        .navbar-dark .navbar-brand, .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+            color: #2a2e78 !important;
+        }
+
+        .mapouter {
+            position: relative;
+            text-align: right;
+            height: 100%;
+            width: 100%;
+        }
+
+        .gmap_canvas {
+            overflow: hidden;
+            background: none !important;
+            height: 100%;
+            width: 100%;
+        }
+
+        .navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+            color: #2a2e78 !important;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #000 !important;
+            font-weight: 700;
+        }
+
+        .testimony-wrap .user-img-fake {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .user-img-fake {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .wrap {
+            position: relative;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 540px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #1a1a1a;
+        }
+
+        h1 {
+            margin-bottom: 60px;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-variant-numeric: normal;
+            font-variant-east-asian: normal;
+            font-weight: 300;
+            font-stretch: normal;
+            font-size: 2.25em;
+            line-height: normal;
+            font-family: nunito sans,Arial,sans-serif;
+        }
+
+            h1 strong {
+                font-weight: 400;
+                /*color: #ea4c4c;*/
+                color: #fff;
+            }
+
+        .countdown {
+            width: 720px;
+            margin: 0 auto;
+        }
+
+            .countdown .bloc-time {
+                float: left;
+                margin-right: 45px;
+                text-align: center;
+            }
+
+                .countdown .bloc-time:last-child {
+                    margin-right: 0;
+                }
+
+            .countdown .count-title {
+                display: block;
+                margin-bottom: 15px;
+                font-style: normal;
+                font-variant-ligatures: normal;
+                font-variant-caps: normal;
+                font-variant-numeric: normal;
+                font-variant-east-asian: normal;
+                font-weight: normal;
+                font-stretch: normal;
+                font-size: 0.94em;
+                line-height: normal;
+                font-family: nunito sans,Arial,sans-serif;
+                color: #fff;
+                text-transform: uppercase;
+            }
+
+            .countdown .figure {
+                position: relative;
+                float: left;
+                height: 110px;
+                width: 100px;
+                margin-right: 10px;
+                background-color: #fff;
+                border-radius: 8px;
+                -moz-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+                -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+                box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+            }
+
+                .countdown .figure:last-child {
+                    margin-right: 0;
+                }
+
+                .countdown .figure > span {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    font-style: normal;
+                    font-variant-ligatures: normal;
+                    font-variant-caps: normal;
+                    font-variant-numeric: normal;
+                    font-variant-east-asian: normal;
+                    font-weight: 700;
+                    font-stretch: normal;
+                    font-size: 5.94em;
+                    line-height: 107px;
+                    font-family: nunito sans,Arial,sans-serif;
+                    font-weight: 700;
+                    color: #2a2e78;
+                }
+
+                .countdown .figure .top:after, .countdown .figure .bottom-back:after {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                }
+
+                .countdown .figure .top {
+                    z-index: 3;
+                    background-color: #f7f7f7;
+                    transform-origin: 50% 100%;
+                    -webkit-transform-origin: 50% 100%;
+                    -moz-border-radius-topleft: 10px;
+                    -webkit-border-top-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    -moz-border-radius-topright: 10px;
+                    -webkit-border-top-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                    -moz-transform: perspective(200px);
+                    -ms-transform: perspective(200px);
+                    -webkit-transform: perspective(200px);
+                    transform: perspective(200px);
+                }
+
+                .countdown .figure .bottom {
+                    z-index: 1;
+                }
+
+                    .countdown .figure .bottom:before {
+                        content: "";
+                        position: absolute;
+                        display: block;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 50%;
+                        background-color: rgba(0, 0, 0, 0.02);
+                    }
+
+                .countdown .figure .bottom-back {
+                    z-index: 2;
+                    top: 0;
+                    height: 50%;
+                    overflow: hidden;
+                    background-color: #f7f7f7;
+                    -moz-border-radius-topleft: 10px;
+                    -webkit-border-top-left-radius: 10px;
+                    border-top-left-radius: 10px;
+                    -moz-border-radius-topright: 10px;
+                    -webkit-border-top-right-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+
+                    .countdown .figure .bottom-back span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+
+                .countdown .figure .top, .countdown .figure .top-back {
+                    height: 50%;
+                    overflow: hidden;
+                    -moz-backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                }
+
+                .countdown .figure .top-back {
+                    z-index: 4;
+                    bottom: 0;
+                    background-color: #fff;
+                    -webkit-transform-origin: 50% 0;
+                    transform-origin: 50% 0;
+                    -moz-transform: perspective(200px) rotateX(180deg);
+                    -ms-transform: perspective(200px) rotateX(180deg);
+                    -webkit-transform: perspective(200px) rotateX(180deg);
+                    transform: perspective(200px) rotateX(180deg);
+                    -moz-border-radius-bottomleft: 10px;
+                    -webkit-border-bottom-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    -moz-border-radius-bottomright: 10px;
+                    -webkit-border-bottom-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+
+                    .countdown .figure .top-back span {
+                        position: absolute;
+                        top: -100%;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .navbar-dark .navbar-toggler {
+            color: #2a2e78;
+            border-color: #2a2e78;
+        }
+
+        .navbar-toggler {
+            border: 1px solid #2a2e78;
+        }
+
+        .wrap-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 30px;
+            border-radius: 50%;
+            position: relative;
+            display: block;
+            background: #2a2e78;
+        }
+
+            .wrap-icon > span {
+                font-size: 2rem;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+
+        .navbar-dark .navbar-nav .nav-link {
+            font-weight: 700;
+        }
+
+        #skippy {
+            display: block;
+            padding: 1em;
+            color: #2a2e78;
+            background-color: #fff;
+            outline: 0;
+        }
+
+        .old-bv {
+            font-size: 14px;
+            background-color: #fff;
+        }
+
+        .bd-navbar {
+            min-height: 4rem;
+            background-color: #fff;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,.05), inset 0 -1px 0 rgba(0,0,0,.1);
+        }
+
+        .slider-text h1, .slider-text h1 span, .slider-text p, #timer .time, #timer .time span {
+            color: #2a2e78 !important;
+        }
+
+        .table-header-content {
+            background: #2a2e78 !important;
+            border-color: #2a2e78 !important;
+            color: #fff !important;
+        }
+
+        .text-align-middle {
+            vertical-align: middle !important;
+        }
+
+        .text-strike-through {
+            text-decoration: line-through;
+        }
+
+        .logo-action-head {
+            font-weight: 600;
+            font-size: 20px;
+            text-transform: uppercase;
+            display: flex;
+        }
+
+        .logo-action-title {
+            font-size: 11px;
+            color: #2a2e78 !important;
+            text-transform: none;
+            display: flex;
+        }
+
+        .logo-action:hover, .logo-action:focus {
+            color: #000 !important;
+        }
+    </style>
+</head>
+<body>
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+        <div class="container">
+            <span class="skiplink-text">Skip to main content</span>
+        </div>
+    </a>
+    <a class="d-block px-3 py-2 text-center text-bold old-bv" style="border-bottom: 1px solid #e9ecef;">
+        <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" scrollamount="8">
+             <strong>
+                Early bird registration started. Register soon…!!! Make your hotel reservations at the earliest possible, October is a peak season. End minute reservations will
+                be subjected to availability. 
+                
+                <strong>Abstract submission</strong> is now started.
+            </strong>
+        </marquee>
+    </a>
+    <div class="navbar navbar-expand-md bg-white navbar-dark" style="border-bottom: 1px solid #e9ecef;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 60px;" />
+				<img src="images/logo_bhu.png" alt="images/logo-bhu.png" style="width: 82px; height: 60px;" />
+				<img src="images/logo_ims.png" alt="images/logo-ims.png" style="width: 82px; height: 60px;" />
+            </a>
+            <div>
+                <div class="conference-banners">
+                    
+                    <div class="conference-date text-center float-right" style="padding-left:.3rem!important;padding-right:.3rem!important;">
+                        <h3 style="font-size: 20px;font-weight: 600;margin-bottom: 0;color: #2a2e78;">Conference</h3>
+                        <img src="images/conference_date.png" alt="workshop_date.png" />
+                    </div>
+                    <div class="workshop-date text-center float-right" style="padding-left:.3rem!important;padding-right:.3rem!important;">
+                        <h3 style="font-size: 20px;font-weight: 600;margin-bottom: 0;color: #2a2e78;">Workshops</h3>
+                        <img src="images/workshop_date.png" alt="workshop_date.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="navbar navbar-expand-md navbar-light bg-light navbar-dark" id="ftco-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="font-weight: 700;">
+                <!--<img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 46px;" />-->
+				<!--<img src="images/logo-blue.png" alt="images/logo-blue.png" style="width: 138px; height: 46px;" />-->
+                ISACONUP-2020
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav">
+                    <li class="nav-item ">
+                        <a class="nav-link p-2" href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="about.html">
+                            About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="faculty.html">
+                            Faculty
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="program.html">
+                            Scientific Program
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link p-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Committee
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="isa _governing _council.html">ISA Governing Council</a>
+                            <a class="dropdown-item" href="organizing-committee.html">ISACONUP 2020 Committee</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="registration.html">
+                            Registration
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="abstract.html">
+                            Abstract
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="accommodation.html">
+                            Accommodation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="trade.html">
+                            Trade
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="venue.html">
+                            Venue
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link p-2" href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="ftco-section ftco-no-pt ftco-no-pb">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-md-12 wrap-about py-md-5 ftco-animate">
+                    <div class="heading-section mb-5">
+                        <div class="justify-content-center pr-md-5">
+                            <h2 style="color: #2a2e78;">IAPACON 2020 - Online Registration Portal</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                                <p>
+                                    Please read the guidelines before filling up your online application.
+                                </p>
+                                <div class="speaker-wrap ftco-animate d-md-flex fadeInUp ftco-animated" style="border-bottom: none;padding-bottom:0px!important;">
+                                    <div class="text" style="padding-left: 0px!important;">
+                                        <h2><a href="javascript:void(0);">Regsitration Guidlines/Instructions:</a></h2>
+                                        <ul>
+                                            <li>First time users, kindly select <b>I am a new user</b> and enter your desired Email ID and Password, Please note this registered email id will be used for all future communications.</li>
+                                            <li>If you are a Pre-registered delegate, kindly select <b>Already Registered User</b> and login with your registered email id and password.</li>
+                                            <li>If you do not remember your password, please select forgotten your password then enter your registered email to get the password reset link.</li>
+                                            <li>Please fill in authenticated personal details, as per your Passport (International Delegate) / Aadhar card (Indian Delegate)</li>
+                                            <li>Please cross check your details before proceeding everytime.</li>
+                                            <li>To edit your details click on Edit option/My account/Edit profile.</li>
+                                            <li>Fees should be paid in INR/USD only.</li>
+                                        </ul>
+
+                                        <h2><a href="javascript:void(0);">Terms & Conditions:</a></h2>
+                                        <ul>
+                                            <li>Registration fee will be based on the date of receipt of payment.</li>
+                                            <li>Delegate will receive payment confirmation mail after successful registration.</li>
+                                            <li>Cheque will not be accepted for spot registration.</li>
+                                            <li>Registration is compulsory for paper publication.</li>
+                                            <li>Only registered delegates will be allowed to attend the conference and receive conference kit.</li>
+                                            <li>Accompanying Person fees includes access to Banquet dinner only.</li>
+                                            <li>No kit guarantee for spot registration.</li>
+                                            <li>No conference kit will be provided to accompanying person.</li>
+                                            <li>Limited number of registrations are available for each workshop.</li>
+                                            <li>If paying through bank transfer kindly send a scan copy of Bank advice/Transaction receipt to below email address to track the payment.</li>
+                                            <li>Students must submit a letter/NOC certificate from their Head of the Department/Institute to register for the conference.</li>
+                                        </ul>
+
+                                        <h2><a href="javascript:void(0);">Cancellation and Refund Policy</a></h2>
+                                        <ul>
+                                            <li>Request for cancellation for refund must be made in writing through mail.</li>
+                                            <li>50% refund will be made before 1st Dec-2019.</li>
+                                            <li>Refund will be reimbursed by cheque only after completion of the conference.</li>
+                                        </ul>
+
+                                        <p>
+                                            For registration related queries, please contact:<br/>
+                                            Mr. Vikram Gupta<br/>
+                                            E: vikramgupta@xyz.in<br/>
+                                            M: +91 1236547891<br/>
+                                            <br/>
+                                            For technical support, email info@isacon2020.com or call +91 1234567894
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12 col-md-12">
+                                <div class="card">
+                                    <div class="card-header" style="background-color: #2a2e78;color: #fff;">
+                                        Sign In or Create an account
+                                    </div>
+                                    <div class="card-body">
+                                        <form class="row">
+                                            <div class="col-md-6">
+                                                <ul>
+                                                    <li>This is a password-protected system.</li>
+                                                    <li>If you are registered delegate, kindly select Already Registered User</li>
+                                                    <li>For first time user, kindly select I am a new user.</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-row">
+                                                    <div class="col-md-12" id="container-forget-password" style="display: none;">
+                                                        <div class="form-group">
+                                                            <label for="lblEmailID">Email ID</label>
+                                                            <input type="email" class="form-control form-control-40" id="inputEmailID"
+                                                            placeholder="Email ID">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="button" class="btn btn-primary">Send</button>&nbsp;
+                                                            <a href="javascript:void(0);">Try Login</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12" id="container-login">
+                                                        <div class="form-group">
+                                                            <label for="lblEmailID">Email ID</label>
+                                                            <input type="email" class="form-control form-control-40" id="inputEmailID"
+                                                            placeholder="Email ID">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" class="custom-control-input" value="0" id="radioMemberTypeNew" name="radioMemberType">
+                                                                <label class="custom-control-label" for="radioMemberTypeNew">I am a new user</label>
+                                                            </div>
+                                                            <div class="custom-control custom-radio custom-control-inline">
+                                                                <input type="radio" class="custom-control-input" value="1" id="radioMemberTypeAlready" name="radioMemberType" checked>
+                                                                <label class="custom-control-label" for="radioMemberTypeAlready">Already registered user</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group" id="container-password">
+                                                            <label for="lblEmailID">Password</label>
+                                                            <input type="password" class="form-control form-control-40" id="inputPassword"
+                                                            placeholder="Password">
+                                                        </div>
+                                                        <div class="form-group" id="container-confirm-password" style="display: none;">
+                                                            <label for="lblConfirmPassword">Confirm Password</label>
+                                                            <input type="password" class="form-control form-control-40" id="inputConfirmPassword"
+                                                            placeholder="Confirm Password">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <button type="button" class="btn btn-primary">Join</button>&nbsp;
+                                                            <a href="javascript:void(0);">Forget your password?</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section contact-section" id="contact-overview">
+        <div class="container">
+            <div class="w-100"></div>
+            <div class="row block-9" style="padding-top: 3rem;">
+                <div class="col-md-6 order-md-last d-flex">
+                    
+                </div>
+                <div class="col-md-6 d-flex">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section" style="padding: 1em 0;background: #2a2e78!important;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        Copyright &copy; ISACONUP &reg; 2020
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="ftco-loader" class="show fullscreen">
+        <svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#2a2e78" /></svg>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="important-update">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" style="font-weight:700;">Important Update</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <b>Quiz contest</b> will be an additional attraction of ISACONUP 2020. It will be held on <b>7th Feb 2020 from 1530-1730 hrs</b>. Interested delegates are <b>invited</b> to participate as a team. Each team comprising two participants. The theme of the <b>Quiz contest</b> will be Anaesthesia, Emergency & Critical Care. The last date of submission of names will be 31.01.2020<br />
+                        E-mail: <a href="mailto:ravindracs0071@gmail.com" title="ravindracs0071@gmail.com">ravindracs0071@gmail.com</a>.<br />
+                        Winner team will be suitably Rewarded. All participants will receive a <b>Certificate of participation</b>.
+                        <hr />
+                    </p>
+                    <p>
+                        Gentle reminder regarding <b>accommodation requirements during the conference (7-9 February 2020)</b>. As during the month of February there will be <b>heavy rush</b> of Tourist, hence we request you to kindly inform us regarding your accommodation requirements at the earliest <b>by sending One Day Room Rent in advance</b>.<br />
+                        For <b>Radisson hotel</b> kindly mail to Dr. Bikram Gupta E: <a href="mailto:bikramgupta03@gmail.com">bikramgupta03@gmail.com</a>, <a href="mailto:isaconup2020@gmail.com">isaconup2020@gmail.com</a>
+                    </p>
+                    <p>
+                        For <b>Other supporting conference hotels</b> kindly e-mail to Dr. Bikram Gupta E: <a href="mailto:bikramgupta03@gmail.com">bikramgupta03@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        function navUrl(uriValue) {
+            window.location.href = uriValue;
+        }
+        $(document).ready(function() {
+$('input[type=radio][name=radioMemberType]').change(function() {
+    if (this.value ==='1') {
+        //show only password
+        $("#inputConfirmPassword").val('');
+        $("#inputPassword").val('');
+        $("#container-confirm-password").hide(1000);
+        $("#container-password").show(1000);
+    }
+    else if (this.value == '0') {
+        //show confirm and pass
+        $("#inputConfirmPassword").val('');
+        $("#inputPassword").val('');
+        $("#container-confirm-password").show(1000);
+        $("#container-password").show(1000);
+    }
+});
+        });
+    </script>
+</body>
+</html>
